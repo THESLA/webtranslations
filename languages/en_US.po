@@ -1,0 +1,614 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WebTranslations 2.0\n"
+"POT-Creation-Date: 2015-10-09 22:21-0300\n"
+"PO-Revision-Date: 2015-10-10 02:42-0300\n"
+"Last-Translator: \n"
+"Language-Team: WebModerna <info@webmoderna.com.ar>\n"
+"Language: Español\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x;_n\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:16 ../404.php:25 ../header.php:34
+msgid "Error 404"
+msgstr "Error 404"
+
+#: ../404.php:22
+msgid ""
+"No entendemos lo que estás haciendo. Intentá buscar una página que tengamos."
+msgstr "We can't understand what are you doing. Try search another page."
+
+#: ../blog.php:16 ../index.php:15
+msgid "Blog"
+msgstr "Blog"
+
+#: ../blog.php:46 ../category.php:44 ../index.php:43 ../tag.php:45
+msgid "Leer más"
+msgstr "Read more"
+
+#: ../blog.php:85 ../index.php:82 ../single.php:238
+msgid "No hay entradas del blog publicadas."
+msgstr ""
+
+#: ../category.php:16
+#, php-format
+msgid "Categoría: \"%s\""
+msgstr "Categories: \"%s\""
+
+#: ../category.php:50 ../single.php:83 ../tag.php:51
+msgid "Etiquetas:"
+msgstr "Tags:"
+
+#: ../category.php:59 ../tag.php:60
+msgid "Categorías: "
+msgstr "Categories:"
+
+#: ../category.php:84
+msgid "No hay entradas en esta categoría."
+msgstr "No post publishe in this category."
+
+#: ../comments.php:12
+msgid "Por favor, no cargues esta página directamente. Gracias :-D"
+msgstr "Please, do not charge directly this page. Thanks!"
+
+#: ../comments.php:16
+msgid ""
+"Esta publicación está protegida con contraseña. Iniciá sesión para ver los "
+"comentarios."
+msgstr "Post protected by password. Log in to see commentaries."
+
+#: ../comments.php:25
+msgid "No hay respuestas"
+msgstr ""
+
+#: ../comments.php:25
+msgid "Una Respuesta"
+msgstr ""
+
+#: ../comments.php:25
+msgid "% Respuestas"
+msgstr "% Responses"
+
+#: ../comments.php:44
+msgid "Responder"
+msgstr ""
+
+#: ../comments.php:74
+msgid "Los comentarios están cerrados."
+msgstr "The commentaries are closed."
+
+#: ../comments.php:87
+msgid "Dejar un Comentario"
+msgstr ""
+
+#: ../comments.php:87
+#, php-format
+msgid "Dejar un Comentario a %s"
+msgstr ""
+
+#: ../comments.php:99
+msgid "Iniciar sesión"
+msgstr "Log in"
+
+#: ../comments.php:101
+msgid "para publicar un comentario"
+msgstr ""
+
+#: ../comments.php:111
+msgid "Hola"
+msgstr "Hi"
+
+#: ../comments.php:116
+msgid "Cerrar sesión"
+msgstr "Exit session"
+
+#: ../comments.php:117
+msgid "Salir"
+msgstr "Log out"
+
+#: ../comments.php:125
+msgid "Apellido y Nombre"
+msgstr "Full name"
+
+#: ../comments.php:129
+msgid "E-Mail. No será publicado"
+msgstr ""
+
+#: ../comments.php:142
+msgid "Comentario"
+msgstr ""
+
+#: ../comments.php:148
+msgid "Enviar Comentario"
+msgstr ""
+
+#: ../comments.php:152
+msgid "Limpiar"
+msgstr "Clear"
+
+#: ../contacto.php:30 ../servicios.php:53
+msgid "No hay nada publicado"
+msgstr ""
+
+#: ../footer.php:34
+msgid "Todos los derechos reservados"
+msgstr ""
+
+#: ../footer.php:37 ../functions.php:232
+msgid "Desarrollado por"
+msgstr "Powered by"
+
+#: ../functions.php:62 ../functions.php:593
+msgid "Siguiente"
+msgstr "Next"
+
+#: ../functions.php:69
+msgid "Anterior"
+msgstr "Back"
+
+#: ../functions.php:232
+msgid "WebModerna | el futuro de la web"
+msgstr "WebModerna | the future of the web"
+
+#: ../functions.php:312
+msgid "Ud. está aquí:"
+msgstr "You are here:"
+
+#: ../functions.php:319
+msgid "Inicio"
+msgstr "Home"
+
+#: ../functions.php:357
+msgid "Menú Principal"
+msgstr "Main Menu"
+
+#: ../functions.php:358
+msgid "Menú Secundario"
+msgstr ""
+
+#: ../functions.php:366
+msgid "Barra lateral derecha"
+msgstr ""
+
+#: ../functions.php:378
+msgid "Pie de página 1 de 4"
+msgstr ""
+
+#: ../functions.php:389
+msgid "Pie de página 2 de 4"
+msgstr ""
+
+#: ../functions.php:399
+msgid "Pie de página 3 de 4"
+msgstr ""
+
+#: ../functions.php:409
+msgid "Pie de página 4 de 4"
+msgstr ""
+
+#: ../functions.php:460 ../functions.php:468
+msgid "Subir las fotos desde aquí"
+msgstr ""
+
+#: ../functions.php:488
+msgid "IMPORTANTE!!: Las imágenes deben ser mínimo de 2000px de ancho."
+msgstr ""
+
+#: ../functions.php:522 ../functions.php:537
+msgid "Arrastrar y soltar. Mover arriba o abajo."
+msgstr ""
+
+#: ../functions.php:528 ../functions.php:540
+msgid "Seleccionar imagen"
+msgstr ""
+
+#: ../functions.php:530 ../functions.php:541
+msgid "Eliminar imagen"
+msgstr ""
+
+#: ../functions.php:531 ../functions.php:542
+msgid "Quitar fila"
+msgstr "Delete row"
+
+#: ../functions.php:547
+msgid " Agregar Imagen"
+msgstr ""
+
+#: ../functions.php:589
+msgid "Página"
+msgstr "Page"
+
+#: ../functions.php:590
+msgid "de"
+msgstr ""
+
+#: ../functions.php:591
+msgid "Primero"
+msgstr ""
+
+#: ../functions.php:592
+msgid "Atrás"
+msgstr ""
+
+#: ../functions.php:594
+msgid "Último"
+msgstr ""
+
+#: ../functions.php:646
+msgid "¡Sal de mi jardín! ¡AHORA MISMO!"
+msgstr ""
+
+#: ../functions.php:745
+msgid "Título secundario."
+msgstr ""
+
+#: ../functions.php:757
+msgid "Escribí un título secundario. Es opcional."
+msgstr ""
+
+#: ../functions.php:806
+msgid "Meta: Descripción. Máximo 160 caracteres."
+msgstr ""
+
+#: ../functions.php:818
+msgid ""
+"Es una descripción que aparece en el meta description. Es muy recomendable "
+"para SEO."
+msgstr ""
+
+#: ../functions.php:867
+msgid "Meta: Palabras claves. Máximo 160 caracteres."
+msgstr ""
+
+#: ../functions.php:879
+msgid ""
+"Palabras claves (keywords) separadas por comas. Son útiles para SEO en "
+"algunos buscadores."
+msgstr ""
+
+#: ../functions.php:929
+msgid "Botón principal"
+msgstr ""
+
+#: ../functions.php:941
+msgid "Texto a mostrar en el botón"
+msgstr ""
+
+#: ../functions.php:942
+msgid "Texto de Botón"
+msgstr ""
+
+#: ../functions.php:989
+msgid "Páginas iniciales"
+msgstr ""
+
+#: ../functions.php:990 ../functions.php:991 ../functions.php:992
+#: ../functions.php:1006
+msgid "Página Inicial"
+msgstr ""
+
+#: ../functions.php:993
+msgid "Item superior:"
+msgstr ""
+
+#: ../functions.php:994
+msgid "Todos las páginas iniciales"
+msgstr "All home pages"
+
+#: ../functions.php:995
+msgid "Agregar una nueva página incial"
+msgstr ""
+
+#: ../functions.php:996
+msgid "Agregar nueva"
+msgstr ""
+
+#: ../functions.php:997
+msgid "Nueva página inicial"
+msgstr ""
+
+#: ../functions.php:998
+msgid "Editar página incial"
+msgstr ""
+
+#: ../functions.php:999
+msgid "Actualizar página inicial"
+msgstr ""
+
+#: ../functions.php:1000
+msgid "Ver página incial"
+msgstr ""
+
+#: ../functions.php:1001
+msgid "Buscar Item"
+msgstr ""
+
+#: ../functions.php:1002
+msgid "No hay páginas iniciales"
+msgstr ""
+
+#: ../functions.php:1003
+msgid "No hay páginas iniciales en la papelera"
+msgstr ""
+
+#: ../functions.php:1007
+msgid "Página principal e incial"
+msgstr ""
+
+#: ../header.php:50
+msgid "Equipo de "
+msgstr ""
+
+#: ../single.php:75
+msgid "Categorías:"
+msgstr ""
+
+#: ../tag.php:16
+#, php-format
+msgid "Etiqueta: \"%s\""
+msgstr ""
+
+#: ../tag.php:82
+msgid "No hay entradas en esta etiqueta."
+msgstr "No post published in this tag."
+
+#: ../includes/custom-header.php:64
+msgid "Circle"
+msgstr ""
+
+#: ../includes/custom-header.php:69
+msgid "Diamond"
+msgstr ""
+
+#: ../includes/custom-header.php:74
+msgid "Star"
+msgstr ""
+
+#: ../includes/demo.php:37
+msgid "Standard Fields"
+msgstr ""
+
+#: ../includes/demo.php:52
+msgid "Text"
+msgstr ""
+
+#: ../includes/demo.php:56
+msgid "Text description"
+msgstr ""
+
+#: ../includes/demo.php:59
+msgid "Default text value"
+msgstr ""
+
+#: ../includes/demo.php:65
+msgid "Checkbox"
+msgstr ""
+
+#: ../includes/demo.php:73
+msgid "Radio"
+msgstr ""
+
+#: ../includes/demo.php:79 ../includes/demo.php:90 ../includes/demo.php:225
+#: ../includes/demo.php:236 ../includes/demo.php:285
+msgid "Label1"
+msgstr ""
+
+#: ../includes/demo.php:80 ../includes/demo.php:91 ../includes/demo.php:226
+#: ../includes/demo.php:237 ../includes/demo.php:286
+msgid "Label2"
+msgstr ""
+
+#: ../includes/demo.php:85 ../includes/demo.php:280
+msgid "Select"
+msgstr ""
+
+#: ../includes/demo.php:96 ../includes/demo.php:291 ../includes/demo.php:316
+msgid "Select an Item"
+msgstr ""
+
+#: ../includes/demo.php:103
+msgid "Hidden value"
+msgstr ""
+
+#: ../includes/demo.php:107
+msgid "Password"
+msgstr ""
+
+#: ../includes/demo.php:113
+msgid "Textarea"
+msgstr ""
+
+#: ../includes/demo.php:114
+msgid "Textarea description"
+msgstr ""
+
+#: ../includes/demo.php:139
+msgid "Advanced Fields"
+msgstr ""
+
+#: ../includes/demo.php:144
+msgid "Heading"
+msgstr ""
+
+#: ../includes/demo.php:146
+msgid "Optional description for this heading"
+msgstr ""
+
+#: ../includes/demo.php:150 ../includes/options-slider.php:9
+#: ../includes/options-slider.php:31
+msgid "Slider"
+msgstr ""
+
+#: ../includes/demo.php:154
+msgid "$"
+msgstr ""
+
+#: ../includes/demo.php:155
+msgid " USD"
+msgstr ""
+
+#: ../includes/demo.php:165
+msgid "Number"
+msgstr ""
+
+#: ../includes/demo.php:173
+msgid "Date picker"
+msgstr ""
+
+#: ../includes/demo.php:178
+msgid "(yyyy-mm-dd)"
+msgstr ""
+
+#: ../includes/demo.php:179
+msgid "yy-mm-dd"
+msgstr ""
+
+#: ../includes/demo.php:187
+msgid "Datetime picker"
+msgstr ""
+
+#: ../includes/demo.php:200
+msgid "Time picker"
+msgstr ""
+
+#: ../includes/demo.php:214
+msgid "Color picker"
+msgstr ""
+
+#: ../includes/demo.php:220
+msgid "Checkbox list"
+msgstr ""
+
+#: ../includes/demo.php:231
+msgid "Autocomplete"
+msgstr ""
+
+#: ../includes/demo.php:246
+msgid "Email"
+msgstr ""
+
+#: ../includes/demo.php:248
+msgid "Email description"
+msgstr ""
+
+#: ../includes/demo.php:254
+msgid "Range"
+msgstr ""
+
+#: ../includes/demo.php:256
+msgid "Range description"
+msgstr ""
+
+#: ../includes/demo.php:265
+msgid "URL"
+msgstr ""
+
+#: ../includes/demo.php:267
+msgid "URL description"
+msgstr ""
+
+#: ../includes/demo.php:273
+msgid "oEmbed"
+msgstr ""
+
+#: ../includes/demo.php:275
+msgid "oEmbed description"
+msgstr ""
+
+#: ../includes/demo.php:295
+msgid "Taxonomy"
+msgstr ""
+
+#: ../includes/demo.php:309
+msgid "Posts (Pages)"
+msgstr ""
+
+#: ../includes/demo.php:325
+msgid "WYSIWYG / Rich Text Editor"
+msgstr ""
+
+#: ../includes/demo.php:330
+msgid "WYSIWYG default value"
+msgstr ""
+
+#: ../includes/demo.php:345
+msgid "File Upload"
+msgstr ""
+
+#: ../includes/demo.php:351
+msgid "File Advanced Upload"
+msgstr ""
+
+#: ../includes/demo.php:359
+msgid "Image Upload"
+msgstr ""
+
+#: ../includes/demo.php:365
+msgid "Thickbox Image Upload"
+msgstr ""
+
+#: ../includes/demo.php:371
+msgid "Plupload Image Upload"
+msgstr ""
+
+#: ../includes/demo.php:378
+msgid "Image Advanced Upload"
+msgstr ""
+
+#: ../includes/options-slider.php:8 ../includes/options-slider.php:32
+msgid "Sliders"
+msgstr "Sliders"
+
+#: ../includes/options-slider.php:10 ../includes/options-slider.php:11
+msgid "SlideShow"
+msgstr "SlideShow"
+
+#: ../includes/options-slider.php:12
+msgid "SlideShow superior:"
+msgstr "Parent SlideShow:"
+
+#: ../includes/options-slider.php:13
+msgid "Todos los SlideShows"
+msgstr "All SlideShows"
+
+#: ../includes/options-slider.php:14
+msgid "Agregar nuevo SlideShow"
+msgstr "Add a new SlideShow"
+
+#: ../includes/options-slider.php:15
+msgid "Agregar uno nuevo"
+msgstr "Add a new"
+
+#: ../includes/options-slider.php:16
+msgid "Nuevo SlideShow"
+msgstr "New SlideShow"
+
+#: ../includes/options-slider.php:17
+msgid "Editar SlideShow"
+msgstr "Edit SlideShow"
+
+#: ../includes/options-slider.php:18
+msgid "Actualizar SlideShow"
+msgstr "Update SlideShow"
+
+#: ../includes/options-slider.php:19
+msgid "Ver SlideShow"
+msgstr "View SlideShow"
+
+#: ../includes/options-slider.php:20
+msgid "Buscar SlideShow"
+msgstr "Search SlideShow"
+
+#: ../includes/options-slider.php:21
+msgid "No hay SlideShows"
+msgstr "No slideshows"
+
+#: ../includes/options-slider.php:22
+msgid "No hay SlideShows en la papelera"
+msgstr "No slideshows in trash"
