@@ -27,6 +27,7 @@ Elementos que incluyen un post
 	border-top 1px dotted $silver
 	padding-bottom 0.5em
 	padding-top 0.5em
+
 // Estilos personalizados para la sección de comentarios
 .comment
 	border 1px solid $silver
@@ -59,6 +60,9 @@ Elementos que incluyen un post
 	padding-left 0
 	li
 		list-style none
+		&:before
+			content ""
+			margin-left auto
 		
 .commentlist li ul li
 	list-style none

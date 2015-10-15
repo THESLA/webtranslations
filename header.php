@@ -23,7 +23,6 @@
 	
 <?php
 
-
 if (is_home() || is_search()) { ?>
 
 	<title><?php bloginfo('name');?></title>
@@ -45,8 +44,12 @@ if (is_home() || is_search()) { ?>
 	<meta name="description" content="<?php echo $meta_description;?>" />
 	<meta name="keywords" content="<?php echo $meta_keywords;?>" />
 
-<?php };?>
+<?php };
 
+$background = of_get_option('background_de_la_web');
+$background_retina = of_get_option('background_retina_de_la_web');
+
+?>
 	<meta name="author" content="<?php _e('Equipo de ', 'webtranslations') ?> WebModerna" />
 	<meta name="author URL" content="http://www.webmoderna.com.ar" />
 	
@@ -62,6 +65,62 @@ if (is_home() || is_search()) { ?>
 	<!-- Estlilos generales y para el IE -->
 	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css' /> -->
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory');?>/assets/index.css" media="all" />
+	<style type="text/css" media="screen">
+		.fondo
+		{
+			background-color: <?php 
+									if ( $background['color'] != null)
+									{
+										echo $background['color'];
+									} else {
+										echo "#555555";
+									}
+								?>;
+
+			background-image: url("<?php
+									if ( $background['image'] != null )
+									{
+										echo $background['image'];
+									} else {
+										echo get_stylesheet_directory_uri().'/img/ultrabook.jpg';
+									}
+								?>");
+			background-repeat: <?php
+								if ( $background['repeat'] != null )
+								{
+									echo $background['repeat'];
+								} else {
+									echo 'no-repeat';
+								}
+								?>;
+			background-position: <?php echo $background['position'];?>;
+			background-attachment: <?php echo $background['attachment'];?>;
+			background-size: auto 100%;
+			-o-background-size: auto 100%;
+			-ms-background-size: auto 100%;
+			-moz-background-size: auto 100%;
+			-webkit-background-size: auto 100%;
+			background-size: cover;
+			-o-background-size: cover;
+			-ms-background-size: cover;
+			-moz-background-size: cover;
+			-webkit-background-size: cover;
+			min-height: 100%;
+		}
+		@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-ms-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+			.fondo
+			{
+				background-image: url("<?php
+									if ( $background_retina['image'] != null )
+									{
+										echo $background_retina['image'];
+									} else {
+										echo get_stylesheet_directory_uri().'/img/utlr_simulador_examen_profesionales.jpg';
+									}
+								?>");
+			}
+		}
+	</style>
 <?php if(wpmd_is_notdevice()) { ?>
 	<!--[if IE 8]><link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/styleIE8.css" media="all" /><![endif]-->
 <?php };?>
@@ -82,7 +141,7 @@ if (is_home() || is_search()) { ?>
 	<link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory');?>/img/favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory');?>/img/favicon-16x16.png" sizes="16x16" />
 	<link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory');?>/img/favicon-128.png" sizes="128x128" />
-	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/favicon.ico" />
+	<!-- <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/favicon.ico" /> -->
 <?php wp_head();?>
 	<!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
 </head>
@@ -105,16 +164,25 @@ if (is_home() || is_search()) { ?>
 
 	<?php } else { ?>
 
-		<div class="logo">
+		<!-- <div class="logo">
 			<a href="<?php bloginfo('url');?>">
 				<img src="<?php bloginfo('stylesheet_directory');?>/img/logo-webtranslations-6.png" />
+			</a>
+		</div> -->
+		<div class="logo">
+			<?php $logo_uploader =  of_get_option('logo_uploader',''); ?>
+			<a href="<?php echo home_url(); ?>" title="<?php bloginfo('name')?>">
+				<?php if ($logo_uploader) { ?>
+				<img src="<?php echo $logo_uploader ?>" />
+				<?php } else { 
+				bloginfo('name');
+				};?>
 			</a>
 		</div>
 
 		<!-- Switcher de idiomas -->
 		<div class="switcher">
-			<a class="active" href="#" hreflang="#">Español</a>
-			<a href="#" hreflang="#">English</a>
+			<?php if ( function_exists( 'the_msls' )) the_msls();?>
 		</div>
 	<?php } ?>
 

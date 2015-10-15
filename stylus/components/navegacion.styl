@@ -45,11 +45,18 @@
 			&:focus
 				background $black_suave	
 			
-	// Estilo solo al border superior exepto al primer item del menú
+// Estilo solo al border superior exepto al primer item del menú
+.nav--listado
 	li + li
 		border-top 1px solid $gray
 		border-top 1px solid rgba($black_puro, 0.25)
 		box-shadow 0px 1px 0px 0px rgba($white, 0.075) inset
+
+.sub-menu
+	li:first-child
+		border-top 1px solid $gray
+		border-top 1px solid rgba($black_puro, 0.25)
+		box-shadow 0px 1px 0px 0px rgba($white, 0.075) inset		
 			
 // Estilos cuando está abierto o cerrado el menú de navegación
 .nav
@@ -116,7 +123,7 @@
 		a
 			&:after
 				content " →"
-				
+
 
 // Cuando se agranda la pantalla
 @media all and (min-width:30em)
@@ -224,3 +231,8 @@
 				position absolute
 				top 0
 				right 1em
+
+	.sub-menu
+		li:first-child
+			border-top none
+			box-shadow none

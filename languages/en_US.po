@@ -1,18 +1,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WebTranslations 2.0\n"
-"POT-Creation-Date: 2015-10-09 22:21-0300\n"
-"PO-Revision-Date: 2015-10-10 02:42-0300\n"
-"Last-Translator: \n"
+"POT-Creation-Date: 2015-10-13 19:49-0300\n"
+"PO-Revision-Date: 2015-10-13 19:49-0300\n"
+"Last-Translator: Edgardo Raúl Galletto | WebModerna <info@webmoderna.com."
+"ar>\n"
 "Language-Team: WebModerna <info@webmoderna.com.ar>\n"
-"Language: Español\n"
+"Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.5.4\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e;_x;_n\n"
+"X-Generator: Poedit 1.8.4\n"
+"X-Poedit-KeywordsList: gettext;gettext_noop;__;_e;_x;_n\n"
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: ..\n"
 
 #: ../404.php:16 ../404.php:25 ../header.php:34
@@ -24,30 +26,30 @@ msgid ""
 "No entendemos lo que estás haciendo. Intentá buscar una página que tengamos."
 msgstr "We can't understand what are you doing. Try search another page."
 
-#: ../blog.php:16 ../index.php:15
+#: ../blog.php:25 ../index.php:15
 msgid "Blog"
 msgstr "Blog"
 
-#: ../blog.php:46 ../category.php:44 ../index.php:43 ../tag.php:45
+#: ../blog.php:61 ../category.php:44 ../index.php:43 ../tag.php:45
 msgid "Leer más"
 msgstr "Read more"
 
-#: ../blog.php:85 ../index.php:82 ../single.php:238
+#: ../blog.php:67 ../category.php:50 ../single.php:83 ../tag.php:51
+msgid "Etiquetas:"
+msgstr "Tags:"
+
+#: ../blog.php:76 ../category.php:59 ../tag.php:60
+msgid "Categorías: "
+msgstr "Categories:"
+
+#: ../blog.php:94 ../index.php:82 ../single.php:242
 msgid "No hay entradas del blog publicadas."
-msgstr ""
+msgstr "There are no published blog entries."
 
 #: ../category.php:16
 #, php-format
 msgid "Categoría: \"%s\""
 msgstr "Categories: \"%s\""
-
-#: ../category.php:50 ../single.php:83 ../tag.php:51
-msgid "Etiquetas:"
-msgstr "Tags:"
-
-#: ../category.php:59 ../tag.php:60
-msgid "Categorías: "
-msgstr "Categories:"
 
 #: ../category.php:84
 msgid "No hay entradas en esta categoría."
@@ -65,298 +67,285 @@ msgstr "Post protected by password. Log in to see commentaries."
 
 #: ../comments.php:25
 msgid "No hay respuestas"
-msgstr ""
+msgstr "No responses"
 
 #: ../comments.php:25
 msgid "Una Respuesta"
-msgstr ""
+msgstr "One response"
 
 #: ../comments.php:25
 msgid "% Respuestas"
 msgstr "% Responses"
 
-#: ../comments.php:44
+#: ../comments.php:40
 msgid "Responder"
-msgstr ""
+msgstr "Reply"
 
-#: ../comments.php:74
+#: ../comments.php:65
 msgid "Los comentarios están cerrados."
 msgstr "The commentaries are closed."
 
-#: ../comments.php:87
+#: ../comments.php:78
 msgid "Dejar un Comentario"
-msgstr ""
+msgstr "Make a comment"
 
-#: ../comments.php:87
+#: ../comments.php:78
 #, php-format
 msgid "Dejar un Comentario a %s"
-msgstr ""
+msgstr "Make a commentari to %s"
 
-#: ../comments.php:99
+#: ../comments.php:90
 msgid "Iniciar sesión"
 msgstr "Log in"
 
-#: ../comments.php:101
+#: ../comments.php:92
 msgid "para publicar un comentario"
-msgstr ""
+msgstr "for publish a commentary"
 
-#: ../comments.php:111
+#: ../comments.php:102
 msgid "Hola"
 msgstr "Hi"
 
-#: ../comments.php:116
+#: ../comments.php:107
 msgid "Cerrar sesión"
 msgstr "Exit session"
 
-#: ../comments.php:117
+#: ../comments.php:108
 msgid "Salir"
 msgstr "Log out"
 
-#: ../comments.php:125
+#: ../comments.php:116
 msgid "Apellido y Nombre"
 msgstr "Full name"
 
-#: ../comments.php:129
+#: ../comments.php:120
 msgid "E-Mail. No será publicado"
-msgstr ""
+msgstr "E-Mail. It wont be published"
 
-#: ../comments.php:142
+#: ../comments.php:133
 msgid "Comentario"
-msgstr ""
+msgstr "Comment"
 
-#: ../comments.php:148
+#: ../comments.php:139
 msgid "Enviar Comentario"
-msgstr ""
+msgstr "Submit comment"
 
-#: ../comments.php:152
+#: ../comments.php:143
 msgid "Limpiar"
 msgstr "Clear"
 
 #: ../contacto.php:30 ../servicios.php:53
 msgid "No hay nada publicado"
-msgstr ""
+msgstr "There is nothing published here"
 
 #: ../footer.php:34
 msgid "Todos los derechos reservados"
-msgstr ""
+msgstr "All rights reserved"
 
-#: ../footer.php:37 ../functions.php:232
+#: ../footer.php:37 ../functions.php:254
 msgid "Desarrollado por"
 msgstr "Powered by"
 
-#: ../functions.php:62 ../functions.php:593
+#: ../functions.php:71 ../functions.php:615
 msgid "Siguiente"
 msgstr "Next"
 
-#: ../functions.php:69
+#: ../functions.php:78
 msgid "Anterior"
 msgstr "Back"
 
-#: ../functions.php:232
+#: ../functions.php:254
 msgid "WebModerna | el futuro de la web"
 msgstr "WebModerna | the future of the web"
 
-#: ../functions.php:312
+#: ../functions.php:334
 msgid "Ud. está aquí:"
 msgstr "You are here:"
 
-#: ../functions.php:319
+#: ../functions.php:341
 msgid "Inicio"
 msgstr "Home"
 
-#: ../functions.php:357
+#: ../functions.php:379
 msgid "Menú Principal"
 msgstr "Main Menu"
 
-#: ../functions.php:358
+#: ../functions.php:380
 msgid "Menú Secundario"
-msgstr ""
+msgstr "Second Menu"
 
-#: ../functions.php:366
+#: ../functions.php:388
 msgid "Barra lateral derecha"
-msgstr ""
+msgstr "Right Sidebar Widget"
 
-#: ../functions.php:378
+#: ../functions.php:400
 msgid "Pie de página 1 de 4"
-msgstr ""
+msgstr "Footer 1 of 4"
 
-#: ../functions.php:389
+#: ../functions.php:411
 msgid "Pie de página 2 de 4"
-msgstr ""
+msgstr "Footer 2 of 4"
 
-#: ../functions.php:399
+#: ../functions.php:421
 msgid "Pie de página 3 de 4"
-msgstr ""
+msgstr "Footer 3 of 4"
 
-#: ../functions.php:409
+#: ../functions.php:431
 msgid "Pie de página 4 de 4"
-msgstr ""
+msgstr "Footer 4 of 4"
 
-#: ../functions.php:460 ../functions.php:468
+#: ../functions.php:482 ../functions.php:490
 msgid "Subir las fotos desde aquí"
-msgstr ""
+msgstr "Upload images from here"
 
-#: ../functions.php:488
+#: ../functions.php:510
 msgid "IMPORTANTE!!: Las imágenes deben ser mínimo de 2000px de ancho."
-msgstr ""
+msgstr "Warning! The images size wide must be 2000px at least."
 
-#: ../functions.php:522 ../functions.php:537
+#: ../functions.php:544 ../functions.php:559
 msgid "Arrastrar y soltar. Mover arriba o abajo."
-msgstr ""
+msgstr "Drag and drop. Move up and down."
 
-#: ../functions.php:528 ../functions.php:540
+#: ../functions.php:550 ../functions.php:562
 msgid "Seleccionar imagen"
-msgstr ""
+msgstr "Select image"
 
-#: ../functions.php:530 ../functions.php:541
+#: ../functions.php:552 ../functions.php:563
 msgid "Eliminar imagen"
-msgstr ""
+msgstr "Delete image"
 
-#: ../functions.php:531 ../functions.php:542
+#: ../functions.php:553 ../functions.php:564
 msgid "Quitar fila"
 msgstr "Delete row"
 
-#: ../functions.php:547
+#: ../functions.php:569
 msgid " Agregar Imagen"
-msgstr ""
+msgstr " Add image"
 
-#: ../functions.php:589
+#: ../functions.php:611
 msgid "Página"
 msgstr "Page"
 
-#: ../functions.php:590
+#: ../functions.php:612
 msgid "de"
-msgstr ""
+msgstr "of"
 
-#: ../functions.php:591
+#: ../functions.php:613
 msgid "Primero"
-msgstr ""
+msgstr "First"
 
-#: ../functions.php:592
+#: ../functions.php:614
 msgid "Atrás"
-msgstr ""
+msgstr "Back"
 
-#: ../functions.php:594
+#: ../functions.php:616
 msgid "Último"
-msgstr ""
+msgstr "Last"
 
-#: ../functions.php:646
+#: ../functions.php:668
 msgid "¡Sal de mi jardín! ¡AHORA MISMO!"
-msgstr ""
+msgstr "Get out from my garden! Now!"
 
-#: ../functions.php:745
+#: ../functions.php:767
 msgid "Título secundario."
-msgstr ""
+msgstr "Second title."
 
-#: ../functions.php:757
+#: ../functions.php:779
 msgid "Escribí un título secundario. Es opcional."
-msgstr ""
+msgstr "You can write a second title; is optional."
 
-#: ../functions.php:806
+#: ../functions.php:828
 msgid "Meta: Descripción. Máximo 160 caracteres."
-msgstr ""
+msgstr "Meta: Description. Max 160 characters."
 
-#: ../functions.php:818
+#: ../functions.php:840
 msgid ""
 "Es una descripción que aparece en el meta description. Es muy recomendable "
 "para SEO."
-msgstr ""
+msgstr "Description very important for SEO."
 
-#: ../functions.php:867
+#: ../functions.php:889
 msgid "Meta: Palabras claves. Máximo 160 caracteres."
-msgstr ""
+msgstr "Meta: Keywords. Max 160 characters."
 
-#: ../functions.php:879
+#: ../functions.php:901
 msgid ""
 "Palabras claves (keywords) separadas por comas. Son útiles para SEO en "
 "algunos buscadores."
-msgstr ""
+msgstr "Keywords separated by comas. Very important for SEO and some browsers."
 
-#: ../functions.php:929
+#: ../functions.php:951
 msgid "Botón principal"
-msgstr ""
+msgstr "Main Button"
 
-#: ../functions.php:941
+#: ../functions.php:963
 msgid "Texto a mostrar en el botón"
-msgstr ""
+msgstr "Text to show in button"
 
-#: ../functions.php:942
+#: ../functions.php:964
 msgid "Texto de Botón"
-msgstr ""
+msgstr "Button text"
 
-#: ../functions.php:989
+#: ../functions.php:1011
 msgid "Páginas iniciales"
-msgstr ""
+msgstr "Home pages"
 
-#: ../functions.php:990 ../functions.php:991 ../functions.php:992
-#: ../functions.php:1006
+#: ../functions.php:1012 ../functions.php:1013 ../functions.php:1014
+#: ../functions.php:1028
 msgid "Página Inicial"
-msgstr ""
+msgstr "Home Page"
 
-#: ../functions.php:993
-msgid "Item superior:"
-msgstr ""
+#: ../functions.php:1015
+msgid "Página Inicial superior:"
+msgstr "Parent home page:"
 
-#: ../functions.php:994
+#: ../functions.php:1016
 msgid "Todos las páginas iniciales"
 msgstr "All home pages"
 
-#: ../functions.php:995
+#: ../functions.php:1017
 msgid "Agregar una nueva página incial"
-msgstr ""
+msgstr "Add a new home page"
 
-#: ../functions.php:996
+#: ../functions.php:1018
 msgid "Agregar nueva"
-msgstr ""
+msgstr "Add new"
 
-#: ../functions.php:997
+#: ../functions.php:1019
 msgid "Nueva página inicial"
-msgstr ""
+msgstr "New home page"
 
-#: ../functions.php:998
+#: ../functions.php:1020
 msgid "Editar página incial"
-msgstr ""
+msgstr "Edit home page"
 
-#: ../functions.php:999
+#: ../functions.php:1021
 msgid "Actualizar página inicial"
-msgstr ""
+msgstr "Update home page"
 
-#: ../functions.php:1000
+#: ../functions.php:1022
 msgid "Ver página incial"
-msgstr ""
+msgstr "View home page"
 
-#: ../functions.php:1001
-msgid "Buscar Item"
-msgstr ""
+#: ../functions.php:1023
+msgid "Buscar Página Inicial"
+msgstr "Search home page"
 
-#: ../functions.php:1002
+#: ../functions.php:1024
 msgid "No hay páginas iniciales"
-msgstr ""
+msgstr "No home pages"
 
-#: ../functions.php:1003
+#: ../functions.php:1025
 msgid "No hay páginas iniciales en la papelera"
-msgstr ""
+msgstr "No home pages in trash"
 
-#: ../functions.php:1007
+#: ../functions.php:1029
 msgid "Página principal e incial"
-msgstr ""
+msgstr "Initial and Home Page"
 
 #: ../header.php:50
 msgid "Equipo de "
-msgstr ""
-
-#: ../single.php:75
-msgid "Categorías:"
-msgstr ""
-
-#: ../tag.php:16
-#, php-format
-msgid "Etiqueta: \"%s\""
-msgstr ""
-
-#: ../tag.php:82
-msgid "No hay entradas en esta etiqueta."
-msgstr "No post published in this tag."
+msgstr "Team of"
 
 #: ../includes/custom-header.php:64
 msgid "Circle"
@@ -421,6 +410,7 @@ msgid "Password"
 msgstr ""
 
 #: ../includes/demo.php:113
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:127
 msgid "Textarea"
 msgstr ""
 
@@ -539,15 +529,15 @@ msgstr ""
 
 #: ../includes/demo.php:345
 msgid "File Upload"
-msgstr ""
+msgstr "Subir Archivo"
 
 #: ../includes/demo.php:351
 msgid "File Advanced Upload"
-msgstr ""
+msgstr "Subir archivo en forma segura. Nunca falla."
 
 #: ../includes/demo.php:359
 msgid "Image Upload"
-msgstr ""
+msgstr "Subir Imagen"
 
 #: ../includes/demo.php:365
 msgid "Thickbox Image Upload"
@@ -559,6 +549,123 @@ msgstr ""
 
 #: ../includes/demo.php:378
 msgid "Image Advanced Upload"
+msgstr "Subir imagen en forma segura. Nunca falla."
+
+#: ../includes/includes/class-options-framework-admin.php:91
+#: ../includes/includes/class-options-framework-admin.php:92
+msgid "Opciones de la Plantilla"
+msgstr ""
+
+#: ../includes/includes/class-options-framework-admin.php:204
+msgid "Click OK para restaurar. Cualquier cambio en la plantilla se perderá!"
+msgstr ""
+
+#: ../includes/includes/class-options-framework-admin.php:235
+msgid "Options por defecto restauradas."
+msgstr ""
+
+#: ../includes/includes/class-options-framework-admin.php:289
+msgid "Opciones guardadas."
+msgstr ""
+
+#: ../includes/includes/class-options-media-uploader.php:62
+msgid "No hay seleccionado ningún archivo"
+msgstr ""
+
+#: ../includes/includes/class-options-media-uploader.php:65
+#: ../includes/includes/class-options-media-uploader.php:118
+msgid "Subir"
+msgstr ""
+
+#: ../includes/includes/class-options-media-uploader.php:67
+#: ../includes/includes/class-options-media-uploader.php:80
+#: ../includes/includes/class-options-media-uploader.php:119
+msgid "Remover"
+msgstr "Remove"
+
+#: ../includes/includes/class-options-media-uploader.php:70
+msgid "Actualizá tu WordPress para un soporte completo de multimedia."
+msgstr ""
+
+#: ../includes/includes/class-options-media-uploader.php:94
+msgid "Ver archivo"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:316
+msgid "No Repetir"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:317
+msgid "Repetir Horizontalmente"
+msgstr "Repeat Horizontally"
+
+#: ../includes/includes/class-options-sanitization.php:318
+msgid "Repetir Verticalmente"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:319
+msgid "Repetir todo"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:331
+msgid "Arriba Izquierda"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:332
+msgid "Arriba Centro"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:333
+msgid "Arriba Derecha"
+msgstr "Top Right"
+
+#: ../includes/includes/class-options-sanitization.php:334
+msgid "Medio Izquierda"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:335
+msgid "Medio Centro"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:336
+msgid "Medio Derecha"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:337
+msgid "Abajo Izquierda"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:338
+msgid "Abajo Centro"
+msgstr "Bottom Center"
+
+#: ../includes/includes/class-options-sanitization.php:339
+msgid "Abajo Derecha"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:351
+msgid "Desplazamiento Normal"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:352
+msgid "Estático en un lugar"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:424
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:424
+msgid "Normal"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:425
+msgid "Cursiva"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:426
+msgid "Negrita"
+msgstr ""
+
+#: ../includes/includes/class-options-sanitization.php:427
+msgid "Negrita Cursiva"
 msgstr ""
 
 #: ../includes/options-slider.php:8 ../includes/options-slider.php:32
@@ -612,3 +719,409 @@ msgstr "No slideshows"
 #: ../includes/options-slider.php:22
 msgid "No hay SlideShows en la papelera"
 msgstr "No slideshows in trash"
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-framework-admin.php:91
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-framework-admin.php:92
+msgid "Theme Options"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-framework-admin.php:204
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-framework-admin.php:235
+msgid "Default options restored."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-framework-admin.php:289
+msgid "Options saved."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-media-uploader.php:62
+msgid "No file chosen"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-media-uploader.php:65
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-media-uploader.php:118
+msgid "Upload"
+msgstr "Subir"
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-media-uploader.php:67
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-media-uploader.php:119
+msgid "Remove"
+msgstr "Borrar"
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-media-uploader.php:70
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-media-uploader.php:94
+msgid "View File"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:316
+msgid "No Repeat"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:317
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:318
+msgid "Repeat Vertically"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:319
+msgid "Repeat All"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:331
+msgid "Top Left"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:332
+msgid "Top Center"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:333
+msgid "Top Right"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:334
+msgid "Middle Left"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:335
+msgid "Middle Center"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:336
+msgid "Middle Right"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:337
+msgid "Bottom Left"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:338
+msgid "Bottom Center"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:339
+msgid "Bottom Right"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:351
+msgid "Scroll Normally"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:352
+msgid "Fixed in Place"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:425
+msgid "Italic"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:426
+msgid "Bold"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/inc/includes/class-options-sanitization.php:427
+msgid "Bold Italic"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:23
+msgid "One"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:24
+msgid "Two"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:25
+msgid "Three"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:26
+msgid "Four"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:27
+msgid "Five"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:32
+msgid "French Toast"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:33
+msgid "Pancake"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:34
+msgid "Omelette"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:35
+msgid "Crepe"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:36
+msgid "Waffle"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:97
+msgid "Basic Settings"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:102
+msgid "Input Text Mini"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:103
+msgid "A mini text input field."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:111
+msgid "Input Text"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:112
+msgid "A text input field."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:119
+msgid "Input with Placeholder"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:120
+msgid "A text input field with an HTML5 placeholder."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:128
+msgid "Textarea description."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:135
+msgid "Input Select Small"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:136
+msgid "Small Select Box."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:145
+msgid "Input Select Wide"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:146
+msgid "A wider select box."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:155
+msgid "Select a Category"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:156
+msgid "Passed an array of categories with cat_ID and cat_name"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:165
+msgid "Select a Tag"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:166
+msgid "Passed an array of tags with term_id and term_name"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:174
+msgid "Select a Page"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:175
+msgid "Passed an pages with ID and post_title"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:182
+msgid "Input Radio (one)"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:183
+msgid "Radio select with default options \"one\"."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:191
+msgid "Example Info"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:192
+msgid "This is just some example information you can put in the panel."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:197
+msgid "Input Checkbox"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:198
+msgid "Example checkbox, defaults to true."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:205
+msgid "Advanced Settings"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:210
+msgid "Check to Show a Hidden Text Input"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:211
+msgid "Click here and see what happens."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:217
+msgid "Hidden Text Input"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:218
+msgid "This option is hidden unless activated by a checkbox click."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:226
+msgid "Uploader Test"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:227
+msgid "This creates a full size uploader that previews the image."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:246
+msgid "Example Background"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:247
+msgid "Change the background CSS."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:254
+msgid "Multicheck"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:255
+msgid "Multicheck description."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:263
+msgid "Colorpicker"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:264
+msgid "No color selected by default."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:270
+msgid "Typography"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:271
+msgid "Example typography."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:278
+msgid "Custom Typography"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:279
+msgid "Custom typography options."
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:287
+msgid "Text Editor"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:306
+msgid "Default Text Editor"
+msgstr ""
+
+#: ../options-framework-theme-master/options-framework-theme-master/options.php:307
+#, php-format
+msgid ""
+"You can also pass settings to the editor.  Read more about wp_editor in <a "
+"href=\"%1$s\" target=\"_blank\">the WordPress codex</a>"
+msgstr ""
+
+#: ../options.php:33
+msgid "Configuración General"
+msgstr "General Settings"
+
+#: ../options.php:38
+msgid "Logotipo Web"
+msgstr ""
+
+#: ../options.php:39
+msgid "Selecciona el logo a mostrar en la web, tamaño 160px x 160px."
+msgstr ""
+
+#: ../options.php:47
+msgid "Background de la web"
+msgstr ""
+
+#: ../options.php:48
+msgid ""
+"Selecciona una imagen grande de 2600px mínimo de ancho por 2600px ó más de "
+"alto."
+msgstr ""
+
+#: ../options.php:60
+msgid "Información de contacto"
+msgstr "Contact Info"
+
+#: ../options.php:65
+msgid "Teléfono de contacto"
+msgstr ""
+
+#: ../options.php:66
+msgid "Instroduzca el número de teléfono de contacto."
+msgstr ""
+
+#: ../options.php:75
+msgid "E-mail de contacto"
+msgstr ""
+
+#: ../options.php:76
+msgid ""
+"Instroduzca el Email de contacto, a este correo llegarán los email enviados "
+"desde el formulario de contacto."
+msgstr ""
+
+#: ../options.php:85
+msgid "Dirección de contacto"
+msgstr ""
+
+#: ../options.php:86
+msgid "Instroduzca su dirección actual."
+msgstr ""
+
+#: ../options.php:95
+msgid "Código postal"
+msgstr ""
+
+#: ../options.php:96
+msgid "Instroduzca su código postal."
+msgstr ""
+
+#: ../single.php:75
+msgid "Categorías:"
+msgstr "Categories:"
+
+#: ../tag.php:16
+#, php-format
+msgid "Etiqueta: \"%s\""
+msgstr "Tag: \"%s\""
+
+#: ../tag.php:82
+msgid "No hay entradas en esta etiqueta."
+msgstr "No post published in this tag."
+
+#~ msgid "Logo"
+#~ msgstr "Logo"

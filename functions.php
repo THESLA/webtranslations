@@ -17,6 +17,14 @@ require_once "includes/wp-mobile-detect.php";
 // Inclusión de soporte para metaboxes
 // require_once "includes/demo.php";
 
+/* Cargar Panle de Opciones
+/*-----------------------------------------*/
+if ( !function_exists( 'optionsframework_init' ) )
+{
+	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/includes/' );
+	require_once dirname( __FILE__ ) . '/includes/options-framework.php';
+}
+
 /*
 // Cargar Panel de Opciones
 if ( !function_exists( 'optionsframework_init' ) )
@@ -218,14 +226,27 @@ remove_filter('comment_text', 'make_clickable', 9);
 
 
 //Cambio del avatar de WordPress por uno personalizado
-function sp_gravatar ($avatar)
+function new_default_avatar ( $avatar_defaults )
 {
-	$custom_avatar = get_stylesheet_directory_uri() . '/img/logo.png';
-	$avatar[$custom_avatar] = "webtranslations ícono";
+	//Set the URL where the image file for your avatar is located
+	$new_avatar_url = get_bloginfo( 'template_directory' ) . '/img/favicon-128.png';
+	//Set the text that will appear to the right of your avatar in Settings>>Discussion
+	$avatar_defaults[$new_avatar_url] = 'Webtranslations Avatar';
+	return $avatar_defaults;
+}
+add_filter( 'avatar_defaults', 'new_default_avatar' );
+/*function sp_gravatar ($avatar)
+{
+	$custom_avatar = get_stylesheet_directory_uri() . '/img/favicon-128.png';
+	$avatar[$custom_avatar] = "Webtranslations Icono";
 	return $avatar;
 }
-add_filter( 'avatar_defaults', 'sp_gravatar' );
+add_filter( 'avatar_defaults', 'sp_gravatar' );*/
 
+
+// Tamaño del gravatar
+function wpsites_change_gravatar_size($size) { return '200';}
+add_filter( 'genesis_author_box_gravatar_size', 'wpsites_change_gravatar_size' );
 
 //Modifica el pie de página del panel de administarción
 function remove_footer_admin()
@@ -738,7 +759,7 @@ add_action( 'template_redirect', 'relative_url', 0 );
 // Agrega un título secundario
 function myplugin_add_meta_box()
 {
-	$screens = array( 'page', 'post', 'home_page' );
+	$screens = array( 'post' );
 	foreach ( $screens as $screen )
 	{
 		add_meta_box(
@@ -772,7 +793,7 @@ function myplugin_save_meta_box_data( $post_id )
 	{
 		return;
 	}
-	if ( isset( $_POST['post_type'] ) && 'fecha' == $_POST['post_type'] )
+	if ( isset( $_POST['post_type'] ) && 'myplugin_new_field' == $_POST['post_type'] )
 	{
 		if ( ! current_user_can( 'edit_page', $post_id ) )
 		{
@@ -799,7 +820,7 @@ add_action( 'save_post', 'myplugin_save_meta_box_data' );
 // Agrega un meta description
 function myplugin_add_meta_box2()
 {
-	$screens = array( 'page', 'post', 'home_page' );
+	$screens = array( 'page', 'post' );
 	foreach ( $screens as $screen )
 	{
 		add_meta_box(
@@ -833,7 +854,7 @@ function myplugin_save_meta_box_data2( $post_id )
 	{
 		return;
 	}
-	if ( isset( $_POST['post_type'] ) && 'fecha' == $_POST['post_type'] )
+	if ( isset( $_POST['post_type'] ) && 'myplugin_new_field2' == $_POST['post_type'] )
 	{
 		if ( ! current_user_can( 'edit_page', $post_id ) )
 		{
@@ -860,7 +881,7 @@ add_action( 'save_post', 'myplugin_save_meta_box_data2' );
 // Agrega un meta keywords
 function myplugin_add_meta_box3()
 {
-	$screens = array( 'page', 'post', 'home_page' );
+	$screens = array( 'page', 'post' );
 	foreach ( $screens as $screen )
 	{
 		add_meta_box(
@@ -894,7 +915,7 @@ function myplugin_save_meta_box_data3( $post_id )
 	{
 		return;
 	}
-	if ( isset( $_POST['post_type'] ) && 'fecha' == $_POST['post_type'] )
+	if ( isset( $_POST['post_type'] ) && 'myplugin_new_field3' == $_POST['post_type'] )
 	{
 		if ( ! current_user_can( 'edit_page', $post_id ) )
 		{
@@ -957,7 +978,7 @@ function myplugin_save_meta_box_data4( $post_id )
 	{
 		return;
 	}
-	if ( isset( $_POST['post_type'] ) && 'fecha' == $_POST['post_type'] )
+	if ( isset( $_POST['post_type'] ) && 'myplugin_new_field4' == $_POST['post_type'] )
 	{
 		if ( ! current_user_can( 'edit_page', $post_id ) )
 		{
@@ -991,7 +1012,7 @@ function home_page() {
 		'singular_name'       => _x( 'Página Inicial', 'Post Type Singular Name', 'webtranslations' ),
 		'menu_name'           => __( 'Página Inicial', 'webtranslations' ),
 		'name_admin_bar'      => __( 'Página Inicial', 'webtranslations' ),
-		'parent_item_colon'   => __( 'Item superior:', 'webtranslations' ),
+		'parent_item_colon'   => __( 'Página Inicial superior:', 'webtranslations' ),
 		'all_items'           => __( 'Todos las páginas iniciales', 'webtranslations' ),
 		'add_new_item'        => __( 'Agregar una nueva página incial', 'webtranslations' ),
 		'add_new'             => __( 'Agregar nueva', 'webtranslations' ),
@@ -999,7 +1020,7 @@ function home_page() {
 		'edit_item'           => __( 'Editar página incial', 'webtranslations' ),
 		'update_item'         => __( 'Actualizar página inicial', 'webtranslations' ),
 		'view_item'           => __( 'Ver página incial', 'webtranslations' ),
-		'search_items'        => __( 'Buscar Item', 'webtranslations' ),
+		'search_items'        => __( 'Buscar Página Inicial', 'webtranslations' ),
 		'not_found'           => __( 'No hay páginas iniciales', 'webtranslations' ),
 		'not_found_in_trash'  => __( 'No hay páginas iniciales en la papelera', 'webtranslations' ),
 	);
@@ -1018,8 +1039,9 @@ function home_page() {
 		'show_in_nav_menus'   => true,
 		'can_export'          => true,
 		'has_archive'         => true,		
-		'exclude_from_search' => true,
+		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
+		'rewrite'             => false,
 		'capability_type'     => 'page',
 	);
 	register_post_type( 'home_page', $args );
@@ -1030,9 +1052,9 @@ add_action( 'init', 'home_page', 0 );
 
 // Soporte extendido a la plantilla
 
-add_theme_support( 'custom-background' );
+/*add_theme_support( 'custom-background' );
 $defaults = array(
-	'default-color'          => '555555',
+	'default-color'          => '',
 	'default-image'          => '%1$s/img/ultrabook.jpg',
 	'default-repeat'         => 'no-repeat',
 	'default-position-x'     => 'center',
@@ -1041,7 +1063,7 @@ $defaults = array(
 	// 'admin-head-callback'    => '',
 	// 'admin-preview-callback' => ''
 );
-add_theme_support( 'custom-background', $defaults );
+add_theme_support( 'custom-background', $defaults );*/
 
 
 /*

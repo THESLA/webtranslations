@@ -54,12 +54,6 @@ get_header();
 					<figcaption><?php echo $alt_text;?></figcaption>
 				</figure>
 			
-				<?php };
-				$titulo_secundario = get_post_meta( $post->ID, '_my_meta_value_key', true );
-				if ( $titulo_secundario != "" ) {
-				?>
-				<h2><?php echo $titulo_secundario;?></h2>
-				<?php };?>
 
 				<div class="elementos_post--contenedor">
 					
@@ -88,6 +82,13 @@ get_header();
 					<?php } ?>
 
 				</div>
+				
+				<?php };
+				$titulo_secundario = get_post_meta( $post->ID, '_my_meta_value_key', true );
+				if ( $titulo_secundario != "" ) {
+				?>
+				<h2><?php echo $titulo_secundario;?></h2>
+				<?php };?>
 
 				<?php the_content();?>
 
@@ -142,22 +143,29 @@ get_header();
 				</div>	
 
 			</article>
-<?php
-// Get Author Data
-$author             = get_the_author();
-$author_description = get_the_author_meta( 'description' );
-$author_url         = esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
-$author_avatar      = get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpex_author_bio_avatar_size', 75 ) );
 
-// Only display if author has a description
-if ( $author_description ) : ?>
-			<!-- datos del autor -->
+			<?php
+			// Get Author Data
+			$author             = get_the_author();
+			$author_description = get_the_author_meta( 'description' );
+			$author_url         = esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) );
+			$author_avatar      = get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpex_author_bio_avatar_size', 75 ) );
+
+			// Only display if author has a description
+			if ( $author_description ) :
+			// datos del autor
+			?>
+
 			<article>
 				<div class="autor comment redes_sociales">
 					<div class="comment-body">
 						<figure>
-							<?php //echo $author_avatar;?>
-							<img src="<?php bloginfo('stylesheet_directory');?>/img/fotomv-250x300.jpg" alt="<?php bloginfo('name');?>" />
+							<!-- <img src="<?php bloginfo('stylesheet_directory');?>/img/fotomv-250x300.jpg" alt="<?php bloginfo('name');?>" /> -->
+							<?php echo get_avatar( 
+								get_the_author_meta('email'), 
+								$size = '200', 
+								$default = '/img/fotomv-250x300.jpg' ); 
+						   ?>
 						</figure>
 						<h3 class="autor--titular">
 							<?php echo $author;?>
@@ -176,29 +184,29 @@ if ( $author_description ) : ?>
 							$facebook_perfil = get_the_author_meta( 'facebook_perfil' );
 							if ( $facebook_perfil && $facebook_perfil != '' )
 							{
-								echo '<li><a class="blanco redondo icon-facebook" href="' . esc_url($facebook_perfil) . '" rel="author" target="_blank"></a></li>';
+								echo '<li><a title="Facebook" class="blanco redondo icon-facebook" href="' . esc_url($facebook_perfil) . '" rel="author" target="_blank"></a></li>';
 							}
 
 							$google_mas_perfil = get_the_author_meta( 'google_mas_perfil' );
 							if ( $google_mas_perfil && $google_mas_perfil != '' )
 							{
-								echo '<li><a class="blanco redondo icon-google-plus" href="' . esc_url($google_mas_perfil) . '" rel="author" target="_blank"></a></li>';
+								echo '<li><a title="Google+" class="blanco redondo icon-google-plus" href="' . esc_url($google_mas_perfil) . '" rel="author" target="_blank"></a></li>';
 							}
 
 							$twitter_perfil = get_the_author_meta( 'twitter_perfil' );
 							if ( $twitter_perfil && $twitter_perfil != '' )
 							{
-								echo '<li><a class="blanco redondo icon-twitter" href="' . esc_url($twitter_perfil) . '" rel="author" target="_blank"></a></li>';
+								echo '<li><a title="Twitter" class="blanco redondo icon-twitter" href="' . esc_url($twitter_perfil) . '" rel="author" target="_blank"></a></li>';
 							}
 
 							$linkedin_perfil = get_the_author_meta( 'linkedin_perfil' );
 							if ( $linkedin_perfil && $linkedin_perfil != '' )
 							{
-								echo '<li><a class="blanco redondo icon-linkedin2" href="' . esc_url($linkedin_perfil) . '" rel="author" target="_blank"></a></li>';
+								echo '<li><a title="LinkedIn" class="blanco redondo icon-linkedin2" href="' . esc_url($linkedin_perfil) . '" rel="author" target="_blank"></a></li>';
 							}
 							?>
 							<li>
-								<a class="blanco redondo icon-mail" href="mailto:<?php echo get_the_author_meta('email');?>" ></a>
+								<a title="E-Mail" class="blanco redondo icon-mail" href="mailto:<?php echo get_the_author_meta('email');?>" ></a>
 							</li>
 						</ul>
 						<p><?php the_author_meta('description'); ?></p>
@@ -209,24 +217,26 @@ if ( $author_description ) : ?>
 		</section>
 
 		<?php endwhile; ?>
+		
 		<!-- Post navigation, o sea la paginación -->
 		<section>
 			<article class="enlaces__navegacion">
 				<?php previous_post_link('<div class="prev">%link</div>' );?>
 				<?php next_post_link( '<div class="next">%link</div>' ); ?>
-				<!-- <div class="prev">
-					<a title="Anterior" class="enlaces__navegacion" href="" rel="prev">Post, noticias o novedad anterior</a>
-				</div>
-				<div class="next">
-					<a title="Siguiente" class="enlaces__navegacion" href="#" rel="next">
-						Post, noticias o novedad siguiente
-					</a>
-				</div> -->
 			</article>
 		</section>
+		
 		<section>
 			<article>
 				<?php comments_template(); ?>
+			</article>
+		</section>
+
+		<!-- Post navigation, o sea la paginación -->
+		<section>
+			<article class="enlaces__navegacion">
+				<?php previous_post_link('<div class="prev">%link</div>' );?>
+				<?php next_post_link( '<div class="next">%link</div>' ); ?>
 			</article>
 		</section>
 

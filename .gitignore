@@ -7,7 +7,7 @@
 #.htaccess
 sitemap.xml
 sitemap.xml.gz
-
+options-framework-theme-master
 assets/fonts/*.zip
 assets/fonts/*.css
 assets/fonts/*.html

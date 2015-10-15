@@ -61,14 +61,24 @@ Siempre tiene la forma siguiente
 		display block
 	a
 		display block
+		font-family $fuente-Titulos !important
 
 .logo
 	float left
-	width 50px
+	max-width 100px
 	img
 		width 50px
-	.h2
-		display none
+	a
+		font-style normal
+		font-size 20px
+		text-decoration none
+		line-height 100%
+
+@media only screen and (min-width: 50em)
+	.logo
+		max-width none
+		a
+			font-size 30px
 		
 .logo_home
 	width 80px

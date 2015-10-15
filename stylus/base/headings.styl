@@ -16,6 +16,7 @@ h6
 	font-weight lighter
 	margin 1.5em auto 0.2em 0
 	a
+	.logo a
 		font-family $fuente-Titulos
 		font-style normal
 		&:first-letter
@@ -28,13 +29,14 @@ h6
 .heading
 	border-bottom 1px dotted $silver
 	margin-bottom 1.5em
-	height 55px
+	// height 55px
 	
 	h1, h2, h3, .h1, .h2, .h3
 		color $rosa
 		font-weight lighter
 		line-height 100%
 		margin 0
+		overflow hidden
 		padding 0.3em 0
 		text-align left
 		
@@ -47,10 +49,14 @@ h6
 			color $white
 			display inline-block
 			float right
+			// position absolute
+			// top 0
+			right 0
 			font-size 25px
 			// height 50px
 			line-height 100%
 			margin-top -8px
+			margin-left 1em
 			padding 10px
 			// width 50px
 

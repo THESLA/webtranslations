@@ -2,7 +2,8 @@
 	<footer class="main__footer">
 		<div class="redes_sociales">
 			<ul>
-			<?php 
+			<?php
+			/* 
 				$facebook_perfil = get_the_author_meta( 'facebook_perfil' );
 				if ( $facebook_perfil && $facebook_perfil != '' )
 				{
@@ -25,6 +26,53 @@
 				if ( $linkedin_perfil && $linkedin_perfil != '' )
 				{
 					echo '<li><a class="blanco redondo icon-linkedin2" href="' . esc_url($linkedin_perfil) . '" rel="author" target="_blank"></a></li>';
+				}
+				*/
+				$facebook_contact = of_get_option('facebook_contact','');
+				$twitter_contact = of_get_option('twitter_contact','');
+				$linkedin_contact = of_get_option('linkedin_contact', '');
+				$google_plus_contact = of_get_option('google_plus_contact','');
+				$email_contact = of_get_option('email_contact','');
+ 
+				if($facebook_contact)
+				{
+				echo '
+					<li>
+						<a title="Facebook" target="_blank" class="blanco redondo icon-facebook" href="http://' . $facebook_contact . '"></a>
+					</li>';
+				}
+				
+				if($google_plus_contact)
+				{
+				echo '
+					<li>
+						<a rel="" title="Google+" target="_blank" class="blanco redondo icon-google-plus" href="http://' . $google_plus_contact . '"></a>
+					</li>';
+				}
+				
+				if($twitter_contact)
+				{
+				echo '
+					<li>
+						<a title="Twitter" target="_blanck" class="blanco redondo icon-twitter" href="http://' . $twitter_contact . '"></a>
+					</li>';
+				}
+
+				if($linkedin_contact)
+				{
+				echo '
+					<li>
+						<a title="LinkedIn" target="_blank" class="blanco redondo icon-linkedin2" href="http://' . $linkedin_contact . '"></a>
+					</li>';
+				}
+				
+				
+				if($email_contact)
+				{
+				echo '
+					<li>
+						<a title="E-Mail" target="_blank" class="blanco redondo icon-mail" href="mailto:' . $email_contact . '"></a>
+					</li>';
 				}
 			?>
 			</ul>
