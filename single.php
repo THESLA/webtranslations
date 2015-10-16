@@ -46,11 +46,13 @@ get_header();
 				<figure>
 				<?php if(wpmd_is_phone()) { ?>					
 					<img src="<?php echo $image[0];?>" alt="<?php echo $alt_text;?>" />
-				<?php } else { ?>
-					<a href="<?php echo $image2[0];?>" data-lightbox="galeria">
+				<?php } else { 
+						/* <a href="<?php echo $image2[0];?>" data-lightbox="galeria">*/
+					?>
 						<img src="<?php echo $image[0];?>" alt="<?php echo $alt_text;?>" />
-					</a>
-				<?php } ?>
+				<?php 
+					// </a>
+				} ?>
 					<figcaption><?php echo $alt_text;?></figcaption>
 				</figure>
 			
@@ -84,8 +86,8 @@ get_header();
 				</div>
 				
 				<?php };
-				$titulo_secundario = get_post_meta( $post->ID, '_my_meta_value_key', true );
-				if ( $titulo_secundario != "" ) {
+					$titulo_secundario = get_post_meta( $post->ID, '_my_meta_value_key', true );
+					if ( $titulo_secundario != "" ) {
 				?>
 				<h2><?php echo $titulo_secundario;?></h2>
 				<?php };?>
@@ -96,11 +98,13 @@ get_header();
 				<div class="galeria">
 					<ul>
 
-				<?php //Móviles
-				if(wpmd_is_phone())
+				<?php
+				/* Por motivos técnicos lo desactivamos ya que no lo necesitará más.
+				//Móviles
+				if( wpmd_is_phone() )
 				{
-					$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible', true));
-					if ($attachID !== '')
+					$attachID = get_post_meta( $post->ID, 'custom_imagenrepetible', true );
+					if ( $attachID != null )
 					{
 						foreach ($attachID as $item)
 						{
@@ -119,12 +123,12 @@ get_header();
 
 			
 				//Desktop.
-				if( wpmd_is_notphone())
+				if( wpmd_is_notphone() )
 				{
-					$attachID = (get_post_meta( $post->ID, 'custom_imagenrepetible',true));
-					if ($attachID !== '')
+					$attachID = get_post_meta( $post->ID, 'custom_imagenrepetible', false );
+					if ( $attachID != null )
 					{
-						foreach ($attachID as $item)
+						foreach ( $attachID as $item )
 						{
 							$imagen = wp_get_attachment_image_src($item,'custom-thumb-450-450');
 							$imagen2 = wp_get_attachment_image_src($item,'custom-thumb-900-x');
@@ -138,7 +142,9 @@ get_header();
 							echo ' /></a></li>';
 						}
 					}
-				} ?>
+				};
+*/
+				?>
 					</ul>
 				</div>	
 
@@ -160,7 +166,6 @@ get_header();
 				<div class="autor comment redes_sociales">
 					<div class="comment-body">
 						<figure>
-							<!-- <img src="<?php bloginfo('stylesheet_directory');?>/img/fotomv-250x300.jpg" alt="<?php bloginfo('name');?>" /> -->
 							<?php echo get_avatar( 
 								get_the_author_meta('email'), 
 								$size = '200', 

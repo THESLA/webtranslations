@@ -23,7 +23,7 @@
 	
 <?php
 
-if (is_home() || is_search()) { ?>
+if ( is_home() || is_search() || is_category() || is_tag() ) { ?>
 
 	<title><?php bloginfo('name');?></title>
 	<meta name="description" content="<?php bloginfo('description');?>" />
@@ -37,7 +37,6 @@ if (is_home() || is_search()) { ?>
 	
 	$meta_description	= get_post_meta( $post->ID, '_my_meta_value_key2', true );
 	$meta_keywords		= get_post_meta( $post->ID, '_my_meta_value_key3', true );
-	
 	?> 
 
 	<title><?php the_title();?> | <?php bloginfo('name');?></title>
@@ -95,17 +94,6 @@ $background_retina = of_get_option('background_retina_de_la_web');
 								?>;
 			background-position: <?php echo $background['position'];?>;
 			background-attachment: <?php echo $background['attachment'];?>;
-			background-size: auto 100%;
-			-o-background-size: auto 100%;
-			-ms-background-size: auto 100%;
-			-moz-background-size: auto 100%;
-			-webkit-background-size: auto 100%;
-			background-size: cover;
-			-o-background-size: cover;
-			-ms-background-size: cover;
-			-moz-background-size: cover;
-			-webkit-background-size: cover;
-			min-height: 100%;
 		}
 		@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-ms-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
 			.fondo
@@ -145,7 +133,7 @@ $background_retina = of_get_option('background_retina_de_la_web');
 <?php wp_head();?>
 	<!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
 </head>
-<body <?php body_class();?>>
+<body>
 <div class="fondo">
 <div class="fondo--transparente">
 	<header class="header">

@@ -53,7 +53,7 @@ function optionsframework_init() {
 
 }
 
-add_action( 'init', 'optionsframework_init', 20 );
+add_action( 'init', 'optionsframework_init', 100 );
 
 endif;
 

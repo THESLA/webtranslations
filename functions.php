@@ -474,7 +474,7 @@ function habilitar_mas_botones($buttons)
 };
 add_filter("mce_buttons_3","habilitar_mas_botones");
 
-
+/*
 // Agregar varias imágenes a las entradas y páginas
 function add_custom_meta_box() {
 	add_meta_box(
@@ -515,12 +515,9 @@ $custom_meta_fields = array( // Dentro de este array podemos incluir más tipos
 function show_custom_meta_box() {
 	global $custom_meta_fields, $post;
 	// Usamos nonce para verificación
-	/*echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
-	Reemplazé por lo de más abajo para desaparecer los errores del depurador
-	*/
 	wp_nonce_field( basename( __FILE__ ), 'custom_meta_box_nonce' );
  // Creamos la tabla de campos personalizados y empezamos un loop con todos ellos
-	echo '<table class="form-table">';
+	echo '<table class="form-table"><tr><td><label for="imagenrepetible"><input type="checkbox"  id="imagenrepetible" name="imagenrepetible" value="" />'._e('Activar las diapositivas', 'webtranslations').'</label></td></tr>';
 	foreach ($custom_meta_fields as $field) { // Hacemos un loop con todos los campos personalizados
 					// obtenemos el valor del campo personalizado si existe para este $post->ID
 		$meta = get_post_meta($post->ID, $field['id'], true);
@@ -578,8 +575,7 @@ function show_custom_meta_box() {
 function save_custom_meta($post_id) {
 	global $custom_meta_fields;
 // verificamos usando nonce
-/*if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__)))
-Reemplazé por lo de más abajo para desaparecer los errores del depurador.*/
+
 	if (!isset($_POST['custom_meta_box_nonce']) || !wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__)))
 	return $post_id;
 // comprobamos si se ha realizado una grabación automática, para no tenerla en cuenta
@@ -603,7 +599,7 @@ Reemplazé por lo de más abajo para desaparecer los errores del depurador.*/
 	} // final del foreach
 };
 add_action('save_post', 'save_custom_meta');
-
+*/
 
 // Paginación avanzada
 function pagination($pages = '', $range = 2)
@@ -753,7 +749,6 @@ function relative_url()
 	home_url($path = '', $scheme = null);
 };
 add_action( 'template_redirect', 'relative_url', 0 );
-
 
 
 // Agrega un título secundario
@@ -1002,9 +997,8 @@ function myplugin_save_meta_box_data4( $post_id )
 add_action( 'save_post', 'myplugin_save_meta_box_data4' );
 
 
-
+/*
 // Tipo de página inicial
-// Register Custom Post Type
 function home_page() {
 
 	$labels = array(
@@ -1048,7 +1042,7 @@ function home_page() {
 
 }
 add_action( 'init', 'home_page', 0 );
-
+*/
 
 // Soporte extendido a la plantilla
 

@@ -90,7 +90,7 @@
 </div><!-- .fondo -->
 	
 <!-- scripts generales -->
-<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/scripts.js"></script>
+<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/scripts.js" async ></script>
 <?php if(wpmd_is_notdevice()) { ?>	
 <!--[if IE 8]>
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/html5.js"></script>
