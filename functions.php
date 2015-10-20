@@ -678,7 +678,7 @@ function remove_short_words($slug)
 };
 add_filter('sanitize_title', 'remove_short_words');
 
-
+/*
 // Relativas las url.
 function relative_url()
 {
@@ -745,7 +745,7 @@ function relative_url()
 	home_url($path = '', $scheme = null);
 };
 add_action( 'template_redirect', 'relative_url', 0 );
-
+*/
 /*
 // Agrega un título secundario
 function myplugin_add_meta_box()
