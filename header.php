@@ -45,8 +45,8 @@ if ( is_home() || is_search() || is_category() || is_tag() ) { ?>
 
 <?php };
 
-$background = of_get_option('background_de_la_web');
-$background_retina = of_get_option('background_retina_de_la_web');
+$background = of_get_option('background_de_la_web', '');
+$background_retina = of_get_option('background_retina_de_la_web', '');
 
 ?>
 	<meta name="author" content="<?php _e('Equipo de ', 'webtranslations') ?> WebModerna" />
@@ -129,34 +129,29 @@ $background_retina = of_get_option('background_retina_de_la_web');
 	<link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory');?>/img/favicon-32x32.png" sizes="32x32" />
 	<link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory');?>/img/favicon-16x16.png" sizes="16x16" />
 	<link rel="icon" type="image/png" href="<?php bloginfo('stylesheet_directory');?>/img/favicon-128.png" sizes="128x128" />
-	<!-- <link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/favicon.ico" /> -->
-<?php wp_head();?>
-	<!--<script src='https://www.google.com/recaptcha/api.js'></script>-->
+	<link rel="shortcut icon" type="image/x-icon" href="<?php bloginfo('stylesheet_directory');?>/favicon.ico" />
+<?php wp_head();
+	// <script src='https://www.google.com/recaptcha/api.js'></script>
+?>
 </head>
 <body>
-<div class="fondo">
+<div class="fondo" id="bg">
 <div class="fondo--transparente">
 	<header class="header">
 	
-	<!-- El logotipo -->
-	<?php if ( is_home() ) { ?>
+	<?php
+	// El logotipo
+	if ( is_home() ) { ?>
 
 		<div class="logo hidden"></div>
 
 		<!-- Switcher de idiomas -->
 		<div class="switcher switcher--home">
 			<?php if ( function_exists( 'the_msls' )) the_msls();?>
-			<!-- <a class="active" href="#" hreflang="#">Español</a>
-			<a href="#" hreflang="#">English</a> -->
 		</div>
 
 	<?php } else { ?>
 
-		<!-- <div class="logo">
-			<a href="<?php bloginfo('url');?>">
-				<img src="<?php bloginfo('stylesheet_directory');?>/img/logo-webtranslations-6.png" />
-			</a>
-		</div> -->
 		<div class="logo">
 			<?php $logo_uploader =  of_get_option('logo_uploader',''); ?>
 			<a href="<?php echo home_url(); ?>" title="<?php bloginfo('name')?>">

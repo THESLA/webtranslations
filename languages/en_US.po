@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WebTranslations 2.0\n"
 "POT-Creation-Date: 2015-10-13 19:49-0300\n"
-"PO-Revision-Date: 2015-10-13 19:49-0300\n"
+"PO-Revision-Date: 2015-10-17 13:06-0300\n"
 "Last-Translator: Edgardo Raúl Galletto | WebModerna <info@webmoderna.com."
 "ar>\n"
 "Language-Team: WebModerna <info@webmoderna.com.ar>\n"
@@ -609,7 +609,7 @@ msgstr ""
 
 #: ../includes/includes/class-options-sanitization.php:331
 msgid "Arriba Izquierda"
-msgstr ""
+msgstr "Top Left"
 
 #: ../includes/includes/class-options-sanitization.php:332
 msgid "Arriba Centro"
@@ -1056,7 +1056,7 @@ msgstr "General Settings"
 
 #: ../options.php:38
 msgid "Logotipo Web"
-msgstr ""
+msgstr "Logo of the web"
 
 #: ../options.php:39
 msgid "Selecciona el logo a mostrar en la web, tamaño 160px x 160px."

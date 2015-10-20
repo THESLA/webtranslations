@@ -306,11 +306,7 @@ add_action('wp_print_scripts', 'wd_single_scripts');
 
 
 //Definir tamaños personalizados de miniaturas - hay que configurarlas
-add_theme_support('post-thumbnails', array(
-	'post',
-	'page',
-	'home_page'
-	));
+add_theme_support('post-thumbnails');
 
 the_post_thumbnail( 'thumbnail' ); 	// 300x300 real: PEQUEÑO, reducido a 150x150 px.
 the_post_thumbnail( 'medium' ); 	// 700x450 real: MEDIO, reducido a 350x225 px.
@@ -750,7 +746,7 @@ function relative_url()
 };
 add_action( 'template_redirect', 'relative_url', 0 );
 
-
+/*
 // Agrega un título secundario
 function myplugin_add_meta_box()
 {
@@ -810,7 +806,7 @@ function myplugin_save_meta_box_data( $post_id )
 	update_post_meta( $post_id, '_my_meta_value_key', $my_data );
 }
 add_action( 'save_post', 'myplugin_save_meta_box_data' );
-
+*/
 
 // Agrega un meta description
 function myplugin_add_meta_box2()
@@ -1316,8 +1312,8 @@ function wp_html_compression_start()
 	ob_start('wp_html_compression_finish');
 }
 add_action('get_header', 'wp_html_compression_start');
-
 */
+
 
 // Cambiando el background del panel de administración
 /*add_action('admin_head', 'logo_admin');

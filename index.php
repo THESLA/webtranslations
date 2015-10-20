@@ -76,6 +76,8 @@ get_header();
 		</section>
 
 		<?php else : ?>
+			</div>
+		</section>
 		<section>
 			<article>
 				<h2>

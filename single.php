@@ -52,8 +52,12 @@ get_header();
 						<img src="<?php echo $image[0];?>" alt="<?php echo $alt_text;?>" />
 				<?php 
 					// </a>
-				} ?>
-					<figcaption><?php echo $alt_text;?></figcaption>
+				};
+				if ( $alt_text != null )
+				{
+					echo '<figcaption>'.$alt_text.'</figcaption>';
+				}
+				?>
 				</figure>
 			
 
@@ -158,7 +162,7 @@ get_header();
 			$author_avatar      = get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'wpex_author_bio_avatar_size', 75 ) );
 
 			// Only display if author has a description
-			if ( $author_description ) :
+		//	if ( $author_description ) :
 			// datos del autor
 			?>
 
@@ -209,16 +213,16 @@ get_header();
 							{
 								echo '<li><a title="LinkedIn" class="blanco redondo icon-linkedin2" href="' . esc_url($linkedin_perfil) . '" rel="author" target="_blank"></a></li>';
 							}
-							?>
-							<li>
+							/*<li>
 								<a title="E-Mail" class="blanco redondo icon-mail" href="mailto:<?php echo get_the_author_meta('email');?>" ></a>
-							</li>
+							</li>*/
+							?>
 						</ul>
 						<p><?php the_author_meta('description'); ?></p>
 					</div>
 				</div>
 			</article>
-			<?php endif; ?>
+			<?php // endif; ?>
 		</section>
 
 		<?php endwhile; ?>

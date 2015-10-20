@@ -64,8 +64,8 @@ get_header();
 				</article>
 
 		<?php endwhile; ?>
-			
 			</div>
+			
 		
 		
 		</section>
@@ -77,7 +77,8 @@ get_header();
 		</section>
 
 		<?php else : ?>
-		
+			</div>
+		</section>
 		<section>
 			<article>
 				<h2>

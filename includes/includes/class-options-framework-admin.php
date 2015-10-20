@@ -232,7 +232,7 @@ class Options_Framework_Admin {
 		 */
 
 		if ( isset( $_POST['reset'] ) ) {
-			add_settings_error( 'options-framework', 'restore_defaults', __( 'Options por defecto restauradas.', 'webtranslations' ), 'updated fade' );
+			add_settings_error( 'options-framework', 'restore_defaults', __( 'Opciones por defecto restauradas.', 'webtranslations' ), 'updated fade' );
 			return $this->get_default_values();
 		}
 

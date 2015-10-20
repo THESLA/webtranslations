@@ -58,6 +58,26 @@ function optionsframework_options()
 	'type' => 'background',
 	'class' => 'of-background-properties');
 
+	// Data Fiscal
+	$options[] = array(
+		'name' => __('Data Fiscal', 'options_framework_theme'),
+		'desc' => __('Introduzca su enlace al Data Fiscal de AFIP o entidad gubernamental impositiva.', 'options_framework_theme'),
+		'id' => 'data_fiscal',
+		'placeholder' => '<a href="datafiscal"><img /></a>',
+		'class' => '',
+		'type' => 'textarea'
+	);
+
+	// Google Analitics
+	$options[] = array(
+		'name' => __('Google Analitycs', 'options_framework_theme'),
+		'desc' => __('Introduzca el script de Google Analitycs.', 'options_framework_theme'),
+		'id' => 'google_analitycs',
+		'placeholder' => 'var _gaq = _gaq || []; _gaq.push(["_setAccount", "UA-40089469-1"]); _gaq.push(["_trackPageview"]); etc...',
+		'class' => '',
+		'type' => 'textarea'
+	);
+
 	
 	/*====================================================================================*/
 	/* =================== Pestaña información de contacto ============================== */
