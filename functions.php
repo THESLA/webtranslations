@@ -259,11 +259,11 @@ add_filter('admin_footer_text','remove_footer_admin');
 //Modificar los campos del perfil de usuario de WordPress
 function extra_contact_info($contactmethods)
 {
-	$contactmethods['profesion_perfil']='Profesión';
-	unset($contactmethods['url']);
+	unset($contactmethods['the_author_url']);
 	unset($contactmethods['aim']);
 	unset($contactmethods['yim']);
 	unset($contactmethods['jabber']);
+	$contactmethods['profesion_perfil']='Profesión';
 	$contactmethods['facebook_perfil']='Facebook';
 	$contactmethods['twitter_perfil']='Twitter';
 	$contactmethods['linkedin_perfil']='LinkedIn';

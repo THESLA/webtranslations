@@ -39,8 +39,6 @@ function optionsframework_options()
 	'desc' => __('Selecciona el logo a mostrar en la web, tamaño 160px x 160px.', 'options_check'),
 	'id' => 'logo_uploader',
 	'type' => 'upload');
-	// Trae el logo desde el panel de administración, si no hay nada muestra el segundo parámetro
-	
 
 	// Background normal del sitio web
 	$options[] = array(
@@ -57,6 +55,16 @@ function optionsframework_options()
 	'id' => 'background_retina_de_la_web',
 	'type' => 'background',
 	'class' => 'of-background-properties');
+
+	// Meta: keywords
+	$options[] = array(
+		'name' => __('Palabras claves', 'options_framework_theme'),
+		'desc' => __('Introducir palabras claves de la web que son útiles para algunos buscadores. Muy importantes para SEO.', 'options_framework_theme'),
+		'id' => 'meta_keywords2',
+		'placeholder' => 'palabra1, palabra2, palabra3...',
+		'class' => '',
+		'type' => 'text'
+	);
 
 	// Data Fiscal
 	$options[] = array(
@@ -78,7 +86,7 @@ function optionsframework_options()
 		'type' => 'textarea'
 	);
 
-	
+
 	/*====================================================================================*/
 	/* =================== Pestaña información de contacto ============================== */
 	$options[] = array(

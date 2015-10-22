@@ -20,24 +20,36 @@
 <head>
 	<meta charset="<?php bloginfo('charset');?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.5, user-scalable=yes" />
-	
+
 <?php
+$meta_keywords2 = of_get_option('meta_keywords2','');
 
 if ( is_home() || is_search() || is_category() || is_tag() ) { ?>
 
 	<title><?php bloginfo('name');?></title>
 	<meta name="description" content="<?php bloginfo('description');?>" />
 
-<?php } elseif (is_404()) { ?>
+<?php
+	if ( $meta_keywords2 != null )
+	{
+		echo '<meta name="keywords" content="'.$meta_keywords2.'" />';
+	}
 
- 	<title><?php _e('Error 404', 'webtranslations');?> | <?php bloginfo('name');?></title>
- 	<meta name="description" content="<?php bloginfo('description');?>" />
+} elseif (is_404()) { ?>
 
-<?php } else {
-	
+	<title><?php _e('Error 404', 'webtranslations');?> | <?php bloginfo('name');?></title>
+	<meta name="description" content="<?php bloginfo('description');?>" />
+
+<?php
+	if ( $meta_keywords2 != null )
+	{
+		echo '<meta name="keywords" content="'.$meta_keywords2.'" />';
+	}
+} else {
+
 	$meta_description	= get_post_meta( $post->ID, '_my_meta_value_key2', true );
 	$meta_keywords		= get_post_meta( $post->ID, '_my_meta_value_key3', true );
-	?> 
+	?>
 
 	<title><?php the_title();?> | <?php bloginfo('name');?></title>
 	<meta name="description" content="<?php echo $meta_description;?>" />
@@ -51,7 +63,7 @@ $background_retina = of_get_option('background_retina_de_la_web', '');
 ?>
 	<meta name="author" content="<?php _e('Equipo de ', 'webtranslations') ?> WebModerna" />
 	<meta name="author URL" content="http://www.webmoderna.com.ar" />
-	
+
 <?php if(wpmd_is_notdevice()) { ?>
 	<!-- Condicionales de scripts para IE -->
 	<!--[if IE 8]>
@@ -60,14 +72,14 @@ $background_retina = of_get_option('background_retina_de_la_web', '');
 	<script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/html5.js"></script>
 	<![endif]-->
 <?php };?>
-	
+
 	<!-- Estlilos generales y para el IE -->
 	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Droid+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css' /> -->
 	<link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_directory');?>/assets/index.css" media="all" />
 	<style type="text/css" media="screen">
 		.fondo
 		{
-			background-color: <?php 
+			background-color: <?php
 									if ( $background['color'] != null)
 									{
 										echo $background['color'];
@@ -112,7 +124,7 @@ $background_retina = of_get_option('background_retina_de_la_web', '');
 <?php if(wpmd_is_notdevice()) { ?>
 	<!--[if IE 8]><link type="text/css" rel="stylesheet" href="<?php bloginfo('stylesheet_directory');?>/assets/styleIE8.css" media="all" /><![endif]-->
 <?php };?>
-<?php if(wpmd_is_ios()) { // Los íconos para iPad y Mac de Apple. ?>	
+<?php if(wpmd_is_ios()) { // Los íconos para iPad y Mac de Apple. ?>
 	<!-- favicon para Apple -->
 	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?php bloginfo('stylesheet_directory');?>/img/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo('stylesheet_directory');?>/img/apple-touch-icon-114x114.png" />
@@ -138,7 +150,7 @@ $background_retina = of_get_option('background_retina_de_la_web', '');
 <div class="fondo" id="bg">
 <div class="fondo--transparente">
 	<header class="header">
-	
+
 	<?php
 	// El logotipo
 	if ( is_home() ) { ?>
@@ -157,7 +169,7 @@ $background_retina = of_get_option('background_retina_de_la_web', '');
 			<a href="<?php echo home_url(); ?>" title="<?php bloginfo('name')?>">
 				<?php if ($logo_uploader) { ?>
 				<img src="<?php echo $logo_uploader ?>" />
-				<?php } else { 
+				<?php } else {
 				bloginfo('name');
 				};?>
 			</a>
@@ -169,7 +181,6 @@ $background_retina = of_get_option('background_retina_de_la_web', '');
 		</div>
 	<?php } ?>
 
-		
 		<!-- El botón menú -->
 		<div class="menu">
 			<a href="#" id="menu">
@@ -178,10 +189,10 @@ $background_retina = of_get_option('background_retina_de_la_web', '');
 				<span></span>
 			</a>
 		</div>
-		
+
 		<!-- Menú de navegación principal -->
 		<nav class="nav" id="nav_home">
-			<?php 
+			<?php
 			$default = array(
 				'container'			=>	'',
 				'container_class'	=>	'nav--listado',
@@ -190,7 +201,7 @@ $background_retina = of_get_option('background_retina_de_la_web', '');
 				'items_wrap'		=>	'<ul id="header_nav" class="nav--listado">%3$s</ul>',
 				'walker'			=>	'',
 				'fallback_cb'		=>	'wp_page_menu'
-			);		
+			);
 			wp_nav_menu($default);
 			?>
 		</nav>
