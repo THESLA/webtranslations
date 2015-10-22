@@ -44,13 +44,13 @@ select
 		// border 1px solid rgba(82, 168, 236, 0.8)
 		box-shadow 0px 0px 5px 1px $Celeste
 
-	
+
 /*input[type="file"]
 	display none*/
 
 input[type="radio"]
 	margin-right 0.1em
-		
+
 input[type="text"].captcha
 .wpcf7-captchac
 	display inline-block
@@ -101,14 +101,14 @@ textarea[name="comment"]
 	input
 		&.pre
 		&.post
-			float left 
+			float left
 			height 30px
 			width 45%
-	
+			
 		&.pre-post
 			border-radius 0 !important
-			float left 
-			height 30px 
+			float left
+			height 30px
 			width 40%
 
 .vform
@@ -134,7 +134,8 @@ textarea[name="comment"]
 	textarea
 	select
 		width 100%
-		
+
+
 	input
 		&.pre
 		&.post
@@ -144,8 +145,8 @@ textarea[name="comment"]
 
 		&.pre-post
 			border-radius 0 !important
-			float left 
-			height 30px 
+			float left
+			height 30px
 			width 70%
 
 
@@ -153,10 +154,10 @@ textarea[name="comment"]
 .vform
 	color #333
 	margin-bottom 20px
-	
+
 	fieldset
 		margin-bottom 10px
-	
+
 	label
 		display block
 		float left
@@ -186,10 +187,10 @@ textarea[name="comment"]
 		display block
 		font-size 13px
 		height 30px
-		line-height 21px 
+		line-height 21px
 		margin-bottom 10px
 		padding 5px 10px
-		outline none	
+		outline none
 		transition all 0.4s ease-in-out
 		vertical-align middle
 		&:focus
@@ -200,25 +201,25 @@ textarea[name="comment"]
 
 	input[type="file"]
 		overflow none
-	
+
 	input
 		&.pre
 			border-radius 0 4px 4px 0
 
 		&.post
 			border-radius 4px 0 0 4px
-		
+
 	textarea
 		min-height 120px
-	
+
 	span
 		&.pre
 		&.post
 			background-color $NaranjaLadrillo
 			border 1px solid $gray
 			color $white
-			display block	
-			font-size 13px 
+			display block
+			font-size 13px
 			line-height 18px
 			height 30px
 			padding 5px 10px
@@ -233,7 +234,7 @@ textarea[name="comment"]
 			border-radius 0 4px 4px 0
 			margin-left -1px
 			float left
-			
+
 	span[type="submit"]
 		&.pre
 		&.post
@@ -242,7 +243,36 @@ textarea[name="comment"]
 			cursor pointer
 			&:hover
 				background $google
-*/				
+*/
+// Estilos de mensajes de error y ok
+.error,
+.result_fail,
+.result_ok
+	border-radius 5em
+	font-family $fuente-principal-italica
+	padding 0.2em 1em
+	position relative
+	display inline-block
+
+.error
+	border 2px solid $ladrillo
+	box-shadow 0px 0px 8px 3px $ladrillo inset
+	&:before
+		content ""
+		border 8px solid transparent
+		border-bottom-color $ladrillo
+		position absolute
+		top -16px
+		left 45%
+
+.result_fail
+	border 2px solid $amarillo
+	box-shadow 0px 0px 8px 3px $amarillo inset
+
+.result_ok
+	border 2px solid $VerdeClaro
+	box-shadow 0px 0px 8px 3px $VerdeClaro inset
+
 // Estilos del contact form
 div.wpcf7 {
 	margin: 0;
@@ -318,7 +348,7 @@ span.wpcf7-not-valid-tip {
 	direction: rtl;
 }
 
-.use-floating-validation-tip span.wpcf7-not-valid-tip { 
+.use-floating-validation-tip span.wpcf7-not-valid-tip {
 	left: auto;
 	right: 20%;
 }
