@@ -97,29 +97,32 @@
 		text-align center
 		a
 			background $rosa
-			border-bottom 1px solid $white
+			border 1px solid $rosa
+			// border-bottom-color $white
 			box-sizing border-box
 			color $white
 			display block
 			height 100%
-			margin 0
+			margin 1px 0 0 0
 			padding 0.5em 1em
 			text-decoration none
 			&:hover
 			&:focus
-				background $rosa_fuerte
+				background $white
+				box-shadow 0px 0px 10px  $rosa inset
+				color $rosa
 		&:hover
 		&:focus
 			background $nube
-			
+
 	div + div
 		border-bottom none
 
-	.prev			
+	.prev
 		a
 			&:before
 				content "← "
-	.next		
+	.next
 		a
 			&:after
 				content " →"

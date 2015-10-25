@@ -5,7 +5,6 @@
 	text-decoration none
 	// text_shadow_lindo()
 
-	
 button
 input[type="button"]
 input[type="submit"]
@@ -14,8 +13,8 @@ input[type="reset"]
 .comment-reply-link
 .cancel-comment-reply a
 	background $rosa
-	*border 0
-	border none
+	// *border 0
+	border 1px solid $rosa
 	box-sizing border-box
 	color $white
 	cursor pointer
@@ -24,29 +23,30 @@ input[type="reset"]
 	font-family $fuente-Titulos
 	font-style normal
 	*line-height 1.5em
-	line-height 1.5em 
+	line-height 1.5em
 	*margin-left 0.3em
-	margin 0.3em 
+	margin 0.3em
 	apareance none
 	-moz-apareance none
 	overflow hidden
-	padding 0.6em 1em 
+	padding 0.6em 1em
 	text-align center
 	text-overflow ellipsis
 	transition all 0.1s ease-in-out
 	vertical-align middle !important
 	white-space nowrap
-	
+
 	// Por defecto
 	&:hover
 	&:focus
 	&:active
-		background $rosa_fuerte
-		color $white
+		background $white
+		box-shadow 0px 0px 10px  $rosa inset
+		color $rosa
 		text-decoration none
 	&:active
 		box-shadow none
-	
+
 	// Tamaños
 	&.large
 		font-size 1.3em
@@ -62,49 +62,49 @@ input[type="reset"]
 		&:focus
 		&:active
 			background $azul_claro
-	
+
 	&.verde
 		background $VerdeClarito
 		&:hover
 		&:focus
 		&:active
 			background $VerdeClaro
-			
+
 	&.rojo
 		background $ladrillo
 		&:hover
 		&:focus
 		&:active
 			background $google
-			
+
 	&.naranja
 		background $naranja_medio
 		&:hover
 		&:focus
 		&:active
 			background $naranja_fuerte
-			
+
 	&.negro
 		background $gris_fuerte
 		&:hover
 		&:focus
 		&:active
 			background $black
-			
+
 	&.amarillo
 		background $amarillo
 		&:hover
 		&:focus
 		&:active
 			background $naranja_suave
-			
+
 	&.morado
 		background $morado_claro
 		&:hover
 		&:focus
 		&:active
 			background $morado_oscuro
-			
+
 .blanco
 	background $rosa
 	border 3px solid $white_crema
@@ -115,7 +115,7 @@ input[type="reset"]
 	&:active
 		background $white
 		text-decoration none
-		
+
 .redondo
 	border-radius 20em
 	border-radius 50%

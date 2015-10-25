@@ -328,7 +328,7 @@ function the_breadcrums()
 {
 	//Defino la ubicación como una variable; así la puedo cargar en la función del bradcrums.
 	$ubicacion = __('Ud. está aquí:', 'webtranslations');
-	echo '<ul class="breadcrums">';   
+	echo '<ul class="breadcrums">';
 	if ( !is_home() )
 	{
 		echo '<li class="breadcrums--label">'.$ubicacion.'<li><a href="';
@@ -336,26 +336,26 @@ function the_breadcrums()
 		echo '">';
 		echo _e('Inicio', 'webtranslations');
 		echo '</a></li>';
-		
+
 		if (is_category())
 		{
 			echo '<li>'.single_cat_title("", false).'</li>';
 		};
-		
+
 		if (is_single())
 		{
 			echo '<li>';
 			the_category('<li>', '</li>');
 			echo '</li>';
 			echo '<li class="breadcrums-muted">';
-			echo the_title(); 
+			echo the_title();
 			echo '</li>';
 		};
-		
+
 		if (is_page())
 		{
 			echo '<li class="breadcrums-muted">';
-			echo the_title(); 
+			echo the_title();
 			echo '</li>';
 		};
 	};
@@ -372,12 +372,42 @@ add_filter('jpeg_quality', create_function('','return 50;'));
 
 //Registrar las menúes de navegación
 register_nav_menus (array(
-	'header_nav'	=>	__('Menú Principal',  'webtranslations'),
-	'second_nav'	=>	__('Menú Secundario', 'webtranslations')
+	'header_nav'	=>	__('Menú Principal',  'webtranslations')
+	// 'second_nav'	=>	__('Menú Secundario', 'webtranslations')
 	)
 );
 
+// El mapa de sitio para Google
+add_action("publish_post", "eg_create_sitemap");
+add_action("publish_page", "eg_create_sitemap");
 
+function eg_create_sitemap()
+{
+	$postsForSitemap = get_posts(array(
+		'numberposts' => -1,
+		'orderby' => 'modified',
+		'post_type'  => array('post','page'),
+		'order'    => 'DESC'
+		));
+
+	$sitemap = '<?xml version="1.0" encoding="UTF-8"?>';
+	$sitemap .= '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
+
+	foreach($postsForSitemap as $post)
+	{
+		setup_postdata($post);
+		$postdate = explode(" ", $post->post_modified);
+		$sitemap .= '<url>'.'<loc>'. get_permalink($post->ID) .'</loc>'.'<lastmod>'. $postdate[0] .'</lastmod>'.'<changefreq>monthly</changefreq>'.'</url>';
+	}
+
+	$sitemap .= '</urlset>';
+
+	$fp = fopen(ABSPATH . "sitemap.xml", 'w');
+	fwrite($fp, $sitemap);
+	fclose($fp);
+}
+
+/*
 // Crear el sidebar de la derecha
 register_sidebar(
 	array(
@@ -391,7 +421,7 @@ register_sidebar(
 );
 
 // Los sidebars del footer
-register_sidebar( 
+register_sidebar(
 	array(
 		'name'			=>	__('Pie de página 1 de 4', 'webtranslations'),
 		'id'			=>	'sidebar_footer_1',
@@ -432,7 +462,7 @@ register_sidebar(
 		'after_title'	=>	'</h4></header>'
 	)
 );
-
+*/
 
 // Agregar nofollow a los enlaces externos
 function auto_nofollow($content)
@@ -600,13 +630,13 @@ add_action('save_post', 'save_custom_meta');
 // Paginación avanzada
 function pagination($pages = '', $range = 2)
 {
-	$pagina_palabra 		= __('Página', 'webtranslations');
-	$de_palabra 			= __('de', 'webtranslations');
+	$pagina_palabra			= __('Página', 'webtranslations');
+	$de_palabra				= __('de', 'webtranslations');
 	$primero 				= __('Primero', 'webtranslations');
 	$atras 					= __('Atrás', 'webtranslations');
 	$siguiente 				= __('Siguiente', 'webtranslations');
 	$ultimo 				= __('Último', 'webtranslations');
-	$showitems 				= ($range * 1) + 1; 
+	$showitems 				= ($range * 1) + 1;
 	global $paged;
 	if(empty($paged)) $paged = 1;
 	if($pages == '')
@@ -617,7 +647,7 @@ function pagination($pages = '', $range = 2)
 		{
 			$pages = 1;
 		}
-	}  
+	}
 	if(1 != $pages)
 	{
 		echo "<span>".$pagina_palabra." ".$paged." ".$de_palabra." ".$pages."</span>";
@@ -713,7 +743,7 @@ function relative_url()
 	'blog_option_siteurl',
 	'includes_url',
 	'site_option_siteurl',
-	'network_home_url', 
+	'network_home_url',
 	'network_site_url',
 
 	// debug only filters
@@ -994,175 +1024,6 @@ add_action( 'save_post', 'myplugin_save_meta_box_data4' );
 
 
 /*
-// Tipo de página inicial
-function home_page() {
-
-	$labels = array(
-		'name'                => _x( 'Páginas iniciales', 'Post Type General Name', 'webtranslations' ),
-		'singular_name'       => _x( 'Página Inicial', 'Post Type Singular Name', 'webtranslations' ),
-		'menu_name'           => __( 'Página Inicial', 'webtranslations' ),
-		'name_admin_bar'      => __( 'Página Inicial', 'webtranslations' ),
-		'parent_item_colon'   => __( 'Página Inicial superior:', 'webtranslations' ),
-		'all_items'           => __( 'Todos las páginas iniciales', 'webtranslations' ),
-		'add_new_item'        => __( 'Agregar una nueva página incial', 'webtranslations' ),
-		'add_new'             => __( 'Agregar nueva', 'webtranslations' ),
-		'new_item'            => __( 'Nueva página inicial', 'webtranslations' ),
-		'edit_item'           => __( 'Editar página incial', 'webtranslations' ),
-		'update_item'         => __( 'Actualizar página inicial', 'webtranslations' ),
-		'view_item'           => __( 'Ver página incial', 'webtranslations' ),
-		'search_items'        => __( 'Buscar Página Inicial', 'webtranslations' ),
-		'not_found'           => __( 'No hay páginas iniciales', 'webtranslations' ),
-		'not_found_in_trash'  => __( 'No hay páginas iniciales en la papelera', 'webtranslations' ),
-	);
-	$args = array(
-		'label'               => __( 'Página Inicial', 'webtranslations' ),
-		'description'         => __( 'Página principal e incial', 'webtranslations' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'thumbnail' ),
-		'hierarchical'        => true,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'menu_position'       => 5,
-		'menu_icon'           => 'dashicons-admin-multisite',
-		'show_in_admin_bar'   => true,
-		'show_in_nav_menus'   => true,
-		'can_export'          => true,
-		'has_archive'         => true,		
-		'exclude_from_search' => false,
-		'publicly_queryable'  => true,
-		'rewrite'             => false,
-		'capability_type'     => 'page',
-	);
-	register_post_type( 'home_page', $args );
-
-}
-add_action( 'init', 'home_page', 0 );
-*/
-
-// Soporte extendido a la plantilla
-
-/*add_theme_support( 'custom-background' );
-$defaults = array(
-	'default-color'          => '',
-	'default-image'          => '%1$s/img/ultrabook.jpg',
-	'default-repeat'         => 'no-repeat',
-	'default-position-x'     => 'center',
-	'default-attachment'     => 'fixed',
-	'wp-head-callback'       => '_custom_background_cb',
-	// 'admin-head-callback'    => '',
-	// 'admin-preview-callback' => ''
-);
-add_theme_support( 'custom-background', $defaults );*/
-
-
-/*
-// Register Theme Features
-function custom_theme_features()  {
-
-	// Add theme support for Automatic Feed Links
-	add_theme_support( 'automatic-feed-links' );
-
-	// Add theme support for Post Formats
-	add_theme_support( 'post-formats', array( 'status', 'quote', 'gallery', 'image', 'video', 'audio', 'link', 'aside', 'chat' ) );
-
-	// Add theme support for Custom Background
-	$background_args = array(
-		'default-color'          => '555555',
-		'default-image'          => '%1$s/img/ultrabook.jpg',
-		'default-repeat'         => 'no-repeat',
-		'default-position-x'     => 'center',
-		'wp-head-callback'       => '_custom_header_cb',
-		'admin-head-callback'    => '_admin_head_callback',
-		'admin-preview-callback' => '_admin_preview_callback',
-	);
-	add_theme_support( 'custom-background', $background_args );
-
-	// Add theme support for Custom Header
-	$header_args = array(
-		'default-image'          => '',
-		'width'                  => 0,
-		'height'                 => 0,
-		'flex-width'             => false,
-		'flex-height'            => false,
-		'uploads'                => true,
-		'random-default'         => false,
-		'header-text'            => false,
-		'default-text-color'     => '',
-		'wp-head-callback'       => '_custom_header_cb',
-		'admin-head-callback'    => '_admin_head_callback',
-		'admin-preview-callback' => '_admin_preview_callback',
-	);
-	add_theme_support( 'custom-header', $header_args );
-
-	// Add theme support for Translation
-	load_theme_textdomain( 'webtranslations', get_template_directory() . '/language' );
-}
-add_action( 'after_setup_theme', 'custom_theme_features' );
-
-function _custom_header_cb() {};
-function _admin_head_callback() {};
-function _admin_preview_callback() {};
-*/
-/*
-// Register Custom Post Type
-function custom_post_type_pie_pagina() {
-	$labels = array(
-		'name'                => _x( 'Contenidos del pie de página', 'Post Type General Name', 'webtranslations' ),
-		'singular_name'       => _x( 'Pie de página', 'webtranslations', 'Post Type Singular Name' ),
-		'menu_name'           => __( 'Pie de página', 'webtranslations' ),
-		'parent_item_colon'   => __( 'Item superior', 'webtranslations' ),
-		'all_items'           => __( 'Todos los items', 'webtranslations' ),
-		'view_item'           => __( 'Ver item', 'webtranslations' ),
-		'add_new_item'        => __( 'Agregar nuevo item', 'webtranslations' ),
-		'add_new'             => __( 'Agregar nuevo', 'webtranslations' ),
-		'edit_item'           => __( 'Editar item', 'webtranslations' ),
-		'update_item'         => __( 'Actualizar item', 'webtranslations' ),
-		'search_items'        => __( 'Buscar item', 'webtranslations' ),
-		'not_found'           => __( 'No hay items', 'webtranslations' ),
-		'not_found_in_trash'  => __( 'No hay items en la papelera', 'webtranslations' ),
-	);
-	$args = array(
-		'label'               => __( 'Contenido que va al pie de página', 'webtranslations' ),
-		'description'         => __( 'Contenido que se puede agregar en el pie de página', 'webtranslations' ),
-		'labels'              => $labels,
-		'supports'            => array( 'title', 'editor', 'page-attributes', ),
-		'hierarchical'        => true,
-		'public'              => true,
-		'show_ui'             => true,
-		'show_in_menu'        => true,
-		'show_in_nav_menus'   => true,
-		'show_in_admin_bar'   => true,
-		'menu_position'       => 5,
-		'menu_icon'           => 'dashicons-feedback',
-		'can_export'          => true,
-		'has_archive'         => true,
-		'exclude_from_search' => true,
-		'publicly_queryable'  => true,
-		'rewrite'             => false,
-		'capability_type'     => 'page',
-	);
-	register_post_type( 'post_type_pie_pagina', $args );
-}
-add_action( 'init', 'custom_post_type_pie_pagina', 0 );
-*/
-/*
-// Eliminar secciones del menú de administración
-add_action( 'admin_menu', 'prefix_remove_dashboard_item' );
-function prefix_remove_dashboard_item()
-{
-	remove_menu_page( 'index.php' );					//Dashboard
-	remove_menu_page( 'edit.php' );						//Posts
-	remove_menu_page( 'upload.php' );					//Media
-	//remove_menu_page( 'edit.php?post_type=page' );	//Pages
-	remove_menu_page( 'edit-comments.php' );			//Comments
-	remove_menu_page( 'themes.php' );					//Appearance
-	remove_menu_page( 'plugins.php' );					//Plugins
-	// remove_menu_page( 'users.php' );					//Users
-	remove_menu_page( 'tools.php' );					//Tools
-	remove_menu_page( 'options-general.php' );			//Settings
-};
-
 // Quitar cajas del escritorio
 function quita_cajas_escritorio()
 {
@@ -1186,10 +1047,10 @@ function quita_cajas_escritorio()
 		remove_meta_box('dashboard_primary', 'dashboard-network', 'side');   // Noticas del blog de WordPress
 		remove_meta_box('dashboard_secondary', 'dashboard-network', 'side');   // Otras noticias de WordPress
 	}
-} 
+}
 add_action('wp_dashboard_setup', 'quita_cajas_escritorio' );
 */
-/*
+
 //Función para Minificar el HTML
 class WP_HTML_Compression
 {
@@ -1212,9 +1073,9 @@ class WP_HTML_Compression
 	protected function bottomComment($raw, $compressed)
 	{
 		$raw = strlen($raw);
-		$compressed = strlen($compressed);		
-		$savings = ($raw-$compressed) / $raw * 100;		
-		$savings = round($savings, 2);		
+		$compressed = strlen($compressed);
+		$savings = ($raw-$compressed) / $raw * 100;
+		$savings = round($savings, 2);
 		return '<!-- HTML Minify | Se ha reducido el tamaño de la web un '.$savings.'% | De '.$raw.' Bytes a '.$compressed.' Bytes -->';
 	}
 	protected function minifyHTML($html)
@@ -1312,7 +1173,7 @@ function wp_html_compression_start()
 	ob_start('wp_html_compression_finish');
 }
 add_action('get_header', 'wp_html_compression_start');
-*/
+
 
 
 // Cambiando el background del panel de administración

@@ -14,10 +14,10 @@ get_header();
 			<header class="heading heading--blog">
 				<h1><?php _e('Blog', 'webtranslations');?></h1>
 			</header>
-			
+
 			<div class="columnas__2">
-			
-			<?php rewind_posts(); 
+
+			<?php rewind_posts();
 			if ( have_posts() ) : while ( have_posts() ) : the_post() ?>
 
 				<article class="Panel-small">
@@ -29,7 +29,7 @@ get_header();
 							<span class="icon-user2 left right"></span><?php the_author();?>
 						</div>
 					</header>
-					
+
 					<figure>
 						<a href="<?php the_permalink();?>">
 						<?php if( has_post_thumbnail() ) { the_post_thumbnail( 'custom-thumb-100-100' ); } else { ?>
@@ -63,12 +63,12 @@ get_header();
 						</div>
 					</footer>
 				</article>
-				
+
 				<?php endwhile; ?>
-			
+
 			</div>
 		</section>
-		
+
 		<section>
 			<div class='pagination'>
 				<?php if ( function_exists("pagination") ) { pagination(); } ?>

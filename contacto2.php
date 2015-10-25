@@ -13,19 +13,19 @@
 		{
 			if ( $_POST['nombre'] == '' )
 			{
-				$error1 = '<span class="error">'.__('Ingrese su nombre y apellido completo', 'webtranslations').'</span>';
+				$error1 = '<span class="error" id="error1">'.__('Ingrese su nombre y apellido completo', 'webtranslations').'</span>';
 			}
 			else if ( $_POST['email'] == '' or !preg_match("/^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/",$_POST['email']) )
 			{
-				$error2 = '<span class="error">'.__('Ingrese un email correcto', 'webtranslations').'</span>';
+				$error2 = '<span class="error" id="error2">'.__('Ingrese un email correcto', 'webtranslations').'</span>';
 			}
 			else if ( $_POST['telefono'] == '' )
 			{
-				$error3 = '<span class="error">'.__('Ingrese un teléfono correcto', 'webtranslations').'</span>';
+				$error3 = '<span class="error" id="error3">'.__('Ingrese un teléfono correcto', 'webtranslations').'</span>';
 			}
 			else if ( $_POST['mensaje'] == '' )
 			{
-				$error4 = '<span class="error">'.__('Tiene que ingresar un mensaje', 'webtranslations').'</span>';
+				$error4 = '<span class="error" id="error4">'.__('Tiene que ingresar un mensaje', 'webtranslations').'</span>';
 			}
 			else
 			{
@@ -136,7 +136,7 @@
 				<?php the_post();?>
 				<div class="estilizacion">
 					<div role="form"  dir="ltr">
-						<form class='contacto' method='POST' action=''>
+						<form class="contacto" method="POST" action="" enctype="multipart/form-data">
 							<fieldset>
 								<legend><?php _e('Datos personales', 'webtranslations');?></legend>
 

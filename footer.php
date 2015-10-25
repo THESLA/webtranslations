@@ -8,30 +8,6 @@
 				$linkedin_contact = of_get_option('linkedin_contact', '');
 				$google_plus_contact = of_get_option('google_plus_contact','');
 				$email_contact = of_get_option('email_contact','');
- 
-				if($facebook_contact)
-				{
-				echo '
-					<li>
-						<a title="Facebook" target="_blank" class="blanco redondo icon-facebook" href="http://' . $facebook_contact . '"></a>
-					</li>';
-				}
-				
-				if($google_plus_contact)
-				{
-				echo '
-					<li>
-						<a rel="" title="Google+" target="_blank" class="blanco redondo icon-google-plus" href="http://' . $google_plus_contact . '"></a>
-					</li>';
-				}
-				
-				if($twitter_contact)
-				{
-				echo '
-					<li>
-						<a title="Twitter" target="_blanck" class="blanco redondo icon-twitter" href="http://' . $twitter_contact . '"></a>
-					</li>';
-				}
 
 				if($linkedin_contact)
 				{
@@ -40,8 +16,31 @@
 						<a title="LinkedIn" target="_blank" class="blanco redondo icon-linkedin2" href="http://' . $linkedin_contact . '"></a>
 					</li>';
 				}
-				
-				
+
+				if($facebook_contact)
+				{
+				echo '
+					<li>
+						<a title="Facebook" target="_blank" class="blanco redondo icon-facebook" href="http://' . $facebook_contact . '"></a>
+					</li>';
+				}
+
+				if($twitter_contact)
+				{
+				echo '
+					<li>
+						<a title="Twitter" target="_blanck" class="blanco redondo icon-twitter" href="http://' . $twitter_contact . '"></a>
+					</li>';
+				}
+
+				if($google_plus_contact)
+				{
+				echo '
+					<li>
+						<a rel="" title="Google+" target="_blank" class="blanco redondo icon-google-plus" href="http://' . $google_plus_contact . '"></a>
+					</li>';
+				}
+
 				if($email_contact)
 				{
 				echo '
@@ -52,6 +51,16 @@
 			?>
 			</ul>
 		</div>
+		<div class="copyright">
+			&copy; <a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a>
+			<?php echo date("Y");?> | <?php _e('Todos los derechos reservados', 'webtranslations');?>
+		</div>
+		<div class="copyright">
+			<?php _e('Desarrollado por', 'webtranslations');?> <a href="http://www.webmoderna.com.ar" target="_blank">WebModerna</a>
+		</div>
+
+		<a id="ir_arriba" class="gotop" href="#"></a>
+
 		<div class="data_fiscal">
 		<?php $data_fiscal = of_get_option('data_fiscal', ''); ?>
 			<article>
@@ -60,14 +69,6 @@
 				</p>
 			</article>
 		</div>
-		<div class="copyright">
-			&copy; <a href="<?php bloginfo('url');?>"><?php bloginfo('name');?></a>
-			<?php echo date("Y");?> | <?php _e('Todos los derechos reservados', 'webtranslations');?>
-		</div>
-		<div class="copyright">
-			<?php _e('Desarrollado por', 'webtranslations');?> <a href="http://www.webmoderna.com.ar" target="_blank">WebModerna</a>
-		</div>
-		<a id="ir_arriba" class="gotop" href="#"></a>
 	</footer>
 </div><!-- .fondo-transparente -->
 </div><!-- .fondo -->
@@ -90,7 +91,7 @@
 <?php wp_footer();?>
 <!-- scripts generales -->
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/scripts.js" async ></script>
-<?php if(wpmd_is_notdevice()) { ?>	
+<?php if(wpmd_is_notdevice()) { ?>
 <!--[if IE 8]>
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/html5.js"></script>
 <script type="text/javascript" src="<?php bloginfo('stylesheet_directory');?>/js/respond.js"></script>

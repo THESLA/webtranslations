@@ -158,9 +158,9 @@ $background_retina = of_get_option('background_retina_de_la_web', '');
 		<div class="logo hidden"></div>
 
 		<!-- Switcher de idiomas -->
-		<div class="switcher switcher--home">
-			<?php if ( function_exists( 'the_msls' )) the_msls();?>
-		</div>
+		<!-- <div class="switcher switcher--home">
+			<?php //if ( function_exists( 'the_msls' )) the_msls();?>
+		</div> -->
 
 	<?php } else { ?>
 
@@ -174,12 +174,12 @@ $background_retina = of_get_option('background_retina_de_la_web', '');
 				};?>
 			</a>
 		</div>
+	<?php } ?>
 
 		<!-- Switcher de idiomas -->
 		<div class="switcher">
 			<?php if ( function_exists( 'the_msls' )) the_msls();?>
 		</div>
-	<?php } ?>
 
 		<!-- El botón menú -->
 		<div class="menu">
